@@ -49,6 +49,12 @@ nav a {
 
     margin-left: 25px;
 
+    transition:.3s;
+
+}
+
+.navbar a:hover{
+    color:#38bdf8;
 }
 
 
