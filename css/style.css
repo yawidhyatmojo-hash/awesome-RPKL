@@ -1,34 +1,185 @@
+/* =========================
+   GLOBAL
+========================= */
+
 body {
+
     margin: 0;
+
     font-family: Arial, sans-serif;
+
+    background: #0f1115;
+
+    color: white;
+
 }
+
+
+/* =========================
+   NAVIGATION
+========================= */
 
 header {
+
     display: flex;
+
     justify-content: space-between;
+
     align-items: center;
-    padding: 20px 40px;
+
+    padding: 20px 50px;
+
+    background: #151821;
+
 }
+
+
+header h1 {
+
+    margin: 0;
+
+}
+
 
 nav a {
-    margin-left: 20px;
+
+    color: white;
+
     text-decoration: none;
+
+    margin-left: 25px;
+
 }
+
+
+/* =========================
+   HERO
+========================= */
 
 .hero {
+
     text-align: center;
-    padding: 120px 20px;
+
+    padding: 140px 20px;
+
 }
+
 
 .hero h2 {
-    font-size: 48px;
+
+    font-size: 60px;
+
+    margin-bottom: 20px;
+
 }
+
 
 .hero p {
+
     font-size: 20px;
+
+    margin-bottom: 30px;
+
 }
 
-footer {
+
+.hero a {
+
+    display: inline-block;
+
+    padding: 14px 25px;
+
+    text-decoration: none;
+
+    background: white;
+
+    color: black;
+
+    border-radius: 6px;
+
+}
+
+
+/* =========================
+   INTRO
+========================= */
+
+.intro {
+
     text-align: center;
+
+    padding: 100px 20px;
+
+}
+
+
+.intro p {
+
+    max-width: 700px;
+
+    margin: auto;
+
+    line-height: 1.7;
+
+}
+
+
+/* =========================
+   DIVISIONS
+========================= */
+
+.divisions-preview {
+
+    text-align: center;
+
+    padding: 100px 20px;
+
+}
+
+
+.division-container {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    flex-wrap: wrap;
+
+}
+
+
+.division-card {
+
+    width: 250px;
+
     padding: 30px;
+
+    background: #181c26;
+
+    border-radius: 10px;
+
+}
+
+
+.division-card p {
+
+    line-height: 1.6;
+
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+    text-align: center;
+
+    padding: 40px;
+
+    background: #151821;
+
 }
