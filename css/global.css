@@ -97,3 +97,17 @@ footer p {
         justify-content: center;
     }
 }
+    button{
+    padding: 17px 29px;
+
+    background: #1e2a38;
+
+    border: 1px solid #293541;
+    border-radius: 8px;
+
+    color: #b9c4ce;
+
+    font-size: 16px;
+
+    cursor: pointer;
+    }
