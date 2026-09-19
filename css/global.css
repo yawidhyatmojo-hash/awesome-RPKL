@@ -1,0 +1,99 @@
+/* =========================================
+   RPKL GLOBAL CSS
+   Shared by every page
+========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #0b0f14;
+    color: #f2f5f7;
+    min-height: 100vh;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 60px;
+
+    background: #111820;
+    border-bottom: 1px solid #27313c;
+}
+
+.site-header h1 {
+    margin: 0;
+    font-size: 28px;
+    letter-spacing: 2px;
+}
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: #dce4eb;
+    text-decoration: none;
+    font-size: 16px;
+
+    transition: 0.2s;
+}
+
+nav a:hover {
+    color: white;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    margin-top: 80px;
+    padding: 30px;
+
+    text-align: center;
+
+    background: #111820;
+    border-top: 1px solid #27313c;
+}
+
+footer p {
+    margin: 0;
+    color: #8996a3;
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .site-header {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}

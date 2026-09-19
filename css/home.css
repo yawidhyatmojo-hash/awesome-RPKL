@@ -1,0 +1,80 @@
+/* =========================================
+   HOME PAGE
+========================================= */
+
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h2 {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    max-width: 700px;
+    margin: 0 auto;
+
+    color: #aeb9c4;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.intro {
+    width: 90%;
+    max-width: 1000px;
+    margin: 50px auto;
+}
+
+.intro h2 {
+    font-size: 32px;
+}
+
+.intro p {
+    color: #b9c4ce;
+    line-height: 1.7;
+}
+
+/* =========================================
+   DIVISION PREVIEW
+========================================= */
+
+.division-preview {
+    width: 90%;
+    max-width: 1100px;
+    margin: 50px auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.preview-card {
+    padding: 25px;
+
+    background: #141b23;
+
+    border: 1px solid #293541;
+    border-radius: 12px;
+}
+
+.preview-card h3 {
+    margin-top: 0;
+}
+
+.preview-card p {
+    color: #b9c4ce;
+    line-height: 1.6;
+}
+
+@media (max-width: 700px) {
+
+    .hero h2 {
+        font-size: 36px;
+    }
+
+    .division-preview {
+        grid-template-columns: 1fr;
+    }
+}
