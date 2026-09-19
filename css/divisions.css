@@ -3,8 +3,8 @@
 ========================================= */
 
 .divisions-container {
-    width: 90%;
-    max-width: 1100px;
+    width: 88%;
+    max-width: 960px;
 
     margin: 60px auto;
 
@@ -39,18 +39,17 @@
 ========================================= */
 
 .division-card {
-    padding: 30px;
+    padding: 24px;
 
-    background: #141b23;
+     background: linear-gradient(180deg, #111827 0%, #0f172a 100%);
 
-    border: 1px solid #293541;
-    border-radius: 14px;
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 18px;
 
-    min-height: 190px;
+    min-height: 210px;
 
     transition:
-        transform 0.2s,
-        border-color 0.2s;
+        0.25s ease;
 }
 
 .division-card:hover {

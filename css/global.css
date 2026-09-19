@@ -29,7 +29,7 @@ main {
    HEADER and NAVBAR
 ========================================= */
 
-.site-header{
+.site-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -37,58 +37,58 @@ main {
     padding: 14px 42px;
 
     background: #0f172a;
-    border-bottom: 1px solid rgba(255,255,255,.08);
+    border-bottom: 1px solid rgba(255, 255, 255, .08);
 
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 
-.logo{
-    font-size:2rem;
-    font-weight:700;
-    color:white;
+.logo {
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
     letter-spacing: 1px;
 }
 
-.navbar{
-    display:flex;
-    gap:26px;
+.navbar {
+    display: flex;
+    gap: 26px;
 }
 
-.navbar a{
-    position:relative;
-    text-decoration:none;
-    color:#cbd5e1;
-    font-weight:500;
-    transition:.23s ease;
+.navbar a {
+    position: relative;
+    text-decoration: none;
+    color: #cbd5e1;
+    font-weight: 500;
+    transition: .23s ease;
     font-size: 15px;
 }
 
-.navbar a:hover{
-    color:white;
+.navbar a:hover {
+    color: white;
 }
 
-.navbar a::after{
-    content:"";
-    position:absolute;
-    left:0;
-    bottom:-6px;
+.navbar a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
 
-    width:0%;
-    height:2px;
+    width: 0%;
+    height: 2px;
 
-    background:#38bdf8;
-    transition:.3s;
+    background: #38bdf8;
+    transition: .3s;
 }
 
 .navbar a:hover::after,
-.navbar a.active::after{
-    width:100%;
+.navbar a.active::after {
+    width: 100%;
 }
 
-.navbar a.active{
-    color:white;
+.navbar a.active {
+    color: white;
 }
 
 /* =========================================
@@ -97,17 +97,53 @@ main {
 
 footer {
     margin-top: 80px;
-    padding: 30px;
-
-    text-align: center;
-
-    background: #111820;
-    border-top: 1px solid #27313c;
+    padding: 40px 50px 20px;
+    background: #0f172a;
+    border-top: 1px solid rgba(255, 255, 255, .08);
 }
 
-footer p {
-    margin: 0;
-    color: #8996a3;
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 25px;
+}
+
+.footer-brand h2 {
+    color: white;
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.footer-brand p {
+    color: #94a3b8;
+}
+
+.footer-links {
+    display: flex;
+    gap: 22px;
+}
+
+.footer-links a {
+    color: #cbd5e1;
+    text-decoration: none;
+    transition: .25s;
+}
+
+.footer-links a:hover {
+    color: #60a5fa;
+}
+
+.footer-bottom{
+    border-top: 1px solid rgba(255,255,255,.06);
+    padding-top: 18px;
+
+    text-align: center;
+}
+
+.footer-bottom p{
+    color: #64748b;
+    font-size: 14px;
 }
 
 /* =========================================
@@ -127,7 +163,8 @@ footer p {
         justify-content: center;
     }
 }
-    button{
+
+button {
     padding: 17px 29px;
 
     background: #1e2a38;
@@ -140,4 +177,4 @@ footer p {
     font-size: 16px;
 
     cursor: pointer;
-    }
+}
