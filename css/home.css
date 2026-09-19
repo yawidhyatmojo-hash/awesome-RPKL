@@ -1,0 +1,143 @@
+/* =========================================
+   HOME PAGE
+========================================= */
+
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h2 {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    max-width: 700px;
+    margin: 0 auto;
+
+    color: #aeb9c4;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.intro {
+    width: 90%;
+    max-width: 1000px;
+    margin: 50px auto;
+}
+
+.intro h2 {
+    font-size: 32px;
+}
+
+.intro p {
+    color: #b9c4ce;
+    line-height: 1.7;
+}
+
+/* =========================================
+   DIVISION PREVIEW
+========================================= */
+
+/* =========================================
+   DIVISION PREVIEW
+========================================= */
+
+.divisions-preview {
+    width: 90%;
+    max-width: 1100px;
+
+    margin: 70px auto;
+}
+
+
+.divisions-preview h2 {
+    margin-bottom: 30px;
+
+    font-size: 32px;
+}
+
+
+/* =========================================
+   DIVISION CONTAINER
+========================================= */
+
+.division-container {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+
+/* =========================================
+   DIVISION CARDS
+========================================= */
+
+.division-container .division-card {
+    padding: 25px;
+
+    background: #141b23;
+
+    border: 1px solid #293541;
+
+    border-radius: 12px;
+
+    transition:
+        transform 0.2s,
+        border-color 0.2s;
+}
+
+
+.division-container .division-card:hover {
+    transform: translateY(-5px);
+
+    border-color: #526170;
+}
+
+
+.division-container .division-card h3 {
+    margin-top: 0;
+
+    margin-bottom: 10px;
+
+    font-size: 22px;
+}
+
+
+.division-container .division-card p {
+    margin: 0;
+
+    color: #b9c4ce;
+
+    line-height: 1.6;
+}
+button{
+    padding: 17px 29px;
+
+    background: #1e2a38;
+
+    border: 1px solid #293541;
+    border-radius: 8px;
+
+    color: #b9c4ce;
+
+    font-size: 16px;
+
+    cursor: pointer;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .division-container {
+        grid-template-columns: 1fr;
+    }
+
+}

@@ -1,0 +1,134 @@
+/* =========================================
+   DIVISIONS PAGE
+========================================= */
+
+.divisions-container {
+    width: 90%;
+    max-width: 1100px;
+
+    margin: 60px auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+/* =========================================
+   PAGE INTRO
+========================================= */
+
+.page-intro {
+    grid-column: 1 / -1;
+
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.page-intro h2 {
+    margin-bottom: 10px;
+    font-size: 42px;
+}
+
+.page-intro p {
+    color: #aeb9c4;
+    font-size: 18px;
+}
+
+/* =========================================
+   DIVISION CARDS
+========================================= */
+
+.division-card {
+    padding: 30px;
+
+    background: #141b23;
+
+    border: 1px solid #293541;
+    border-radius: 14px;
+
+    min-height: 190px;
+
+    transition:
+        transform 0.2s,
+        border-color 0.2s;
+}
+
+.division-card:hover {
+    transform: translateY(-4px);
+    border-color: #526170;
+}
+
+.division-card h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+
+    font-size: 25px;
+}
+
+.division-card p {
+    color: #b9c4ce;
+
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* =========================================
+   MULTIMEDIA
+========================================= */
+
+.multimedia-card {
+    grid-column: 1 / -1;
+    min-height: auto;
+}
+
+/* =========================================
+   SUBDIVISIONS
+========================================= */
+
+.subdivisions {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 18px;
+    margin-top: 25px;
+}
+
+.subdivision-card {
+    padding: 22px;
+
+    background: #0e141b;
+
+    border: 1px solid #252f39;
+    border-radius: 10px;
+}
+
+.subdivision-card h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+
+    font-size: 19px;
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .divisions-container {
+        grid-template-columns: 1fr;
+        width: 92%;
+    }
+
+    .multimedia-card {
+        grid-column: auto;
+    }
+
+    .subdivisions {
+        grid-template-columns: 1fr;
+    }
+
+    .page-intro h2 {
+        font-size: 32px;
+    }
+}

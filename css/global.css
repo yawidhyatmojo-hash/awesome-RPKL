@@ -1,0 +1,143 @@
+/* =========================================
+   RPKL GLOBAL CSS
+   Shared by every page
+========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #0b0f14;
+    color: #f2f5f7;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+/* =========================================
+   HEADER and NAVBAR
+========================================= */
+
+.site-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 14px 42px;
+
+    background: #0f172a;
+    border-bottom: 1px solid rgba(255,255,255,.08);
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo{
+    font-size:2rem;
+    font-weight:700;
+    color:white;
+    letter-spacing: 1px;
+}
+
+.navbar{
+    display:flex;
+    gap:26px;
+}
+
+.navbar a{
+    position:relative;
+    text-decoration:none;
+    color:#cbd5e1;
+    font-weight:500;
+    transition:.23s ease;
+    font-size: 15px;
+}
+
+.navbar a:hover{
+    color:white;
+}
+
+.navbar a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-6px;
+
+    width:0%;
+    height:2px;
+
+    background:#38bdf8;
+    transition:.3s;
+}
+
+.navbar a:hover::after,
+.navbar a.active::after{
+    width:100%;
+}
+
+.navbar a.active{
+    color:white;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    margin-top: 80px;
+    padding: 30px;
+
+    text-align: center;
+
+    background: #111820;
+    border-top: 1px solid #27313c;
+}
+
+footer p {
+    margin: 0;
+    color: #8996a3;
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .site-header {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+    button{
+    padding: 17px 29px;
+
+    background: #1e2a38;
+
+    border: 1px solid #293541;
+    border-radius: 8px;
+
+    color: #b9c4ce;
+
+    font-size: 16px;
+
+    cursor: pointer;
+    }
