@@ -17,190 +17,64 @@
 
 <body>
 
-    <header class="site-header">
+    <div class="dashboard-layout">
 
-        <h1 class="logo">RPKL</h1>
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
 
-        <nav class="navbar">
-            <a href="../index.html">Home</a>
-            <a href="dashboard.html" class="active">Dashboard</a>
-            <a href="profile.html">Profile</a>
-            <a href="admin.html">Admin</a>
-        </nav>
-
-    </header>
-
-
-    <main>
-
-        <h2>Member Dashboard</h2>
-
-        <p>
-            Welcome, Abi.
-        </p>
-
-
-        <!-- PERSONAL PROGRESS -->
-
-        <section>
-
-            <h3>
-                My Weekly Progress
-            </h3>
-
-            <p>
-                Monday: 8
-            </p>
-
-            <p>
-                Tuesday: 7
-            </p>
-
-            <p>
-                Wednesday: 9
-            </p>
-
-            <p>
-                Thursday: 6
-            </p>
-
-            <p>
-                Friday: 8
-            </p>
-
-        </section>
-
-
-        <!-- SUBMISSION -->
-
-        <section>
-
-            <h3>
-                Submit Progress
-            </h3>
-
-            <form>
-
-                <label>
-                    Screenshot
-                </label>
-
-                <br>
-
-                <input type="file" accept="image/*">
-
-                <br><br>
-
-
-                <label>
-                    Progress Description
-                </label>
-
-                <br>
-
-                <textarea placeholder="Describe what you accomplished..."></textarea>
-
-                <br><br>
-
-
-                <button type="submit">
-                    Submit Progress
-                </button>
-
-            </form>
-
-        </section>
-
-
-        <!-- RECENT HISTORY -->
-
-        <section>
-
-            <h3>
-                Recent Progress
-            </h3>
-
-            <article>
-
-                <p>
-                    Monday — Enemy movement system completed.
-                </p>
-
-                <p>
-                    Rating: 8/10
-                </p>
-
-                <p>
-                    Status: Accepted
-                </p>
-
-            </article>
-
-
-            <article>
-
-                <p>
-                    Tuesday — Character animation improved.
-                </p>
-
-                <p>
-                    Rating: 7/10
-                </p>
-
-                <p>
-                    Status: Accepted
-                </p>
-
-            </article>
-
-        </section>
-
-
-        <!-- DIVISION -->
-
-        <section>
-
-            <h3>
-                My Division
-            </h3>
-
-            <p>
-                Game Development
-            </p>
-
-            <p>
-                Division Progress: 78%
-            </p>
-
-        </section>
-
-    </main>
-
-
-    <footer class="footer">
-
-        <div class="footer-top">
-
-            <div class="footer-brand">
-                <h2>RPKL</h2>
-                <p>Build • Create • Innovate</p>
+            <div class="sidebar-logo">
+                <h1 class="logo">RPKL</h1>
             </div>
 
-            <div class="footer-links">
+            <div class="sidebar-profile">
+
+                <img src="../assets/images/dybala.jpg" alt="Abi">
+
+                <div>
+                    <h3>Abi</h3>
+                    <span>Member</span>
+                </div>
+
+            </div>
+
+
+            <nav class="sidebar-menu">
                 <a href="../index.html">Home</a>
-                <a href="dashboard.html">Dashboard</a>
+                <a href="dashboard.html" class="active">Dashboard</a>
                 <a href="profile.html">Profile</a>
                 <a href="admin.html">Admin</a>
-            </div>
+            </nav>
+        </aside>
+
+
+        <!-- CONTENT -->
+        <div class="dashboard-content">
+
+            <!-- TOPBAR -->
+            <header class="topbar">
+
+                <input type="text" placeholder="Search..." >
+
+                <div class="topbar-user">
+
+                    <img src="../assets/images/dybala.jpg" alt="Abi">
+
+                    <span>Abi</span>
+
+                </div>
+
+            </header>
+
+            <!-- MAIN -->
+            <main class="dashboard-page">
+
+                <!-- nanti isi dashboard disini -->
+
+            </main>
 
         </div>
 
-        <div class="footer-bottom">
-            <p>© 2026 RPKL IT Organization. All Rights Reserved.</p>
-        </div>
-
-    </footer>
-
+    </div>
 
 </body>
 
