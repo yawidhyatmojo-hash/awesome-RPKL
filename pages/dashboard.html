@@ -53,7 +53,7 @@
             <!-- TOPBAR -->
             <header class="topbar">
 
-                <input type="text" placeholder="Search..." >
+                <input type="text" placeholder="Search...">
 
                 <div class="topbar-user">
 
@@ -69,12 +69,201 @@
             <main class="dashboard-page">
 
                 <!-- nanti isi dashboard disini -->
+                <!-- WELCOME BANNER -->
+
+                <section class="welcome-banner">
+
+                    <div class="welcome-text">
+
+                        <span>MEMBER DASHBOARD</span>
+
+                        <h2>Welcome back, Abi 👋</h2>
+
+                        <p>
+                            Continue your Game Development journey and submit
+                            your weekly progress to the RPKL organization.
+                        </p>
+
+                    </div>
+
+                    <button class="manage-btn">
+                        My Profile
+                    </button>
+
+                </section>
+
+                <!-- QUICK STATISTICS -->
+
+                <section class="stats-grid">
+
+                    <div class="stats-card">
+                        <div class="stat-icon">⭐</div>
+                        <div class="stat-info">
+                            <span>Weekly Average</span>
+                            <h3>7.6</h3>
+                        </div>
+                    </div>
+
+                    <div class="stats-card">
+                        <div class="stat-icon">✅</div>
+                        <div class="stat-info">
+                            <span>Accepted</span>
+                            <h3>12</h3>
+                        </div>
+                    </div>
+
+                    <div class="stats-card">
+                        <div class="stat-icon">🔥</div>
+                        <div class="stat-info">
+                            <span>Current Streak</span>
+                            <h3>5 Days</h3>
+                        </div>
+                    </div>
+
+                    <div class="stats-card">
+                        <div class="stat-icon">🎮</div>
+                        <div class="stat-info">
+                            <span>Division Progress</span>
+                            <h3>78%</h3>
+                        </div>
+                    </div>
+
+                </section>
+
+                <!-- MAIN GRID -->
+
+                <div class="main-grid">
+
+                    <!-- WEEKLY PROGRESS -->
+
+                    <section class="dashboard-card">
+
+                        <div class="card-header">
+                            <h3>My Weekly Progress</h3>
+                            <span>This Week</span>
+                        </div>
+
+                        <div class="progress-chart">
+
+                            <div class="bar-group">
+                                <div class="bar" style="height:80%"></div>
+                                <small>Mon</small>
+                            </div>
+
+                            <div class="bar-group">
+                                <div class="bar" style="height:70%"></div>
+                                <small>Tue</small>
+                            </div>
+
+                            <div class="bar-group">
+                                <div class="bar" style="height:90%"></div>
+                                <small>Wed</small>
+                            </div>
+
+                            <div class="bar-group">
+                                <div class="bar" style="height:60%"></div>
+                                <small>Thu</small>
+                            </div>
+
+                            <div class="bar-group">
+                                <div class="bar" style="height:80%"></div>
+                                <small>Fri</small>
+                            </div>
+
+                        </div>
+
+                    </section>
+
+                    <!-- SUBMIT PROGRESS -->
+
+                    <section class="dashboard-card">
+
+                        <div class="card-header">
+                            <h3>Submit Progress</h3>
+                            <span>Today</span>
+                        </div>
+
+                        <form class="submit-form">
+
+                            <label>Screenshot</label>
+                            <input type="file" accept="image/*">
+
+                            <label>Description</label>
+                            <textarea placeholder="Describe today's progress..."></textarea>
+
+                            <button type="submit">
+                                Submit Progress
+                            </button>
+
+                        </form>
+
+                    </section>
+
+                </div> <!-- main-grid -->
+
+                <!-- RECENT PROGRESS -->
+                <!-- RECENT PROGRESS -->
+
+                <section class="dashboard-card recent-card">
+
+                    <div class="card-header">
+                        <h3>Recent Progress</h3>
+                        <span>Last 3 Submissions</span>
+                    </div>
+
+                    <div class="recent-list">
+
+                        <article class="recent-item">
+
+                            <div class="recent-info">
+                                <h4>Enemy Movement System</h4>
+                                <p>Monday • Game Development</p>
+                            </div>
+ 
+                            <div class="recent-meta">
+                                <strong>8/10</strong>
+                                <span class="status accepted">Accepted</span>
+                            </div>
+
+                        </article>
+
+                        <article class="recent-item">
+
+                            <div class="recent-info">
+                                <h4>Character Animation</h4>
+                                <p>Tuesday • Game Development</p>
+                            </div>
+
+                            <div class="recent-meta">
+                                <strong>7/10</strong>
+                                <span class="status accepted">Accepted</span>
+                            </div>
+
+                        </article>
+
+                        <article class="recent-item">
+
+                            <div class="recent-info">
+                                <h4>Inventory UI Prototype</h4>
+                                <p>Wednesday • Game Development</p>
+                            </div>
+
+                            <div class="recent-meta">
+                                <strong>6/10</strong>
+                                <span class="status pending">Pending</span>
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                </section>
 
             </main>
 
-        </div>
+        </div> <!-- dashboard-content -->
 
-    </div>
+    </div> <!-- dashboard-layout -->
 
 </body>
 
