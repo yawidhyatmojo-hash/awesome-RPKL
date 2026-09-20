@@ -5,14 +5,11 @@
 
     <meta charset="UTF-8">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Profile | RPKL</title>
 
-   <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="../css/profile.css">
 
 </head>
@@ -30,7 +27,7 @@
                 Dashboard
             </a>
 
-            <a href="profile.html">
+            <a href="profile.html" class="active">
                 Profile
             </a>
 
@@ -39,111 +36,145 @@
     </header>
 
 
-    <main>
-
-        <main class="profile-page">
-
-    <!-- PROFILE HERO -->
-
-    <section class="profile-hero">
-
-        <div class="profile-avatar">
-            <img src="../assets/images/abi.jpg" alt="Abi">
-        </div>
-
-        <div class="profile-info">
-
-            <span class="division-badge">
-                GAME DEVELOPMENT
-            </span>
-
-            <h1>Abi</h1>
-
-            <p>
-                Passionate about creating games, programming,
-                and building interactive experiences in RPKL.
-            </p>
-
-        </div>
-
-    </section>
 
 
-    <!-- STATISTICS -->
+    <main class="profile-page">
 
-    <section class="stats-section">
+        <!-- PROFILE HERO -->
 
-        <div class="section-title">
-            <h2>Personal Statistics</h2>
-            <p>Your weekly performance overview</p>
-        </div>
+        <section class="profile-header">
 
-        <div class="stats-grid">
-
-            <div class="stat-card">
-                <h3 id="weekly-average">7.5</h3>
-                <span>Weekly Average</span>
+            <div class="avatar">
+                <img src="../assets/images/dybala.jpg" alt="Abi">
             </div>
 
-            <div class="stat-card">
-                <h3>12</h3>
-                <span>Accepted</span>
+            <div class="profile-info">
+
+                <span class="badge">
+                    GAME DEVELOPMENT
+                </span>
+
+                <h1>Abi</h1>
+
+                <p>
+                    Passionate about creating games, programming,
+                    and building interactive experiences in RPKL.
+                </p>
+
             </div>
 
-            <div class="stat-card">
-                <h3>2</h3>
-                <span>Declined</span>
+        </section>
+
+
+        <!-- STATISTICS -->
+
+        <section class="stats-section">
+
+            <div class="section-title">
+                <h3>Personal Statistics</h2>
+                    <p>Your weekly performance overview</p>
             </div>
 
-            <div class="stat-card">
-                <h3>5</h3>
-                <span>Day Streak</span>
+            <div class="stats-grid">
+
+                <div class="stats-card">
+                    <h3 id="weekly-average">7.5</h3>
+                    <span>Weekly Average</span>
+                </div>
+
+                <div class="stats-card">
+                    <h3>12</h3>
+                    <span>Accepted</span>
+                </div>
+
+                <div class="stats-card">
+                    <h3>2</h3>
+                    <span>Declined</span>
+                </div>
+
+                <div class="stats-card">
+                    <h3>5</h3>
+                    <span>Day Streak</span>
+                </div>
+
             </div>
 
-        </div>
-
-    </section>
+        </section>
 
 
-    <!-- PROGRESS -->
+        <!-- PROGRESS -->
 
-    <section class="progress-section">
+        <section class="progress-section">
 
-        <div class="section-title">
-            <h2>Progress History</h2>
-            <p>Weekly development score</p>
-        </div>
-
-        <div class="progress-list">
-
-            <div class="progress-item">
-                <span>Week 1</span>
-                <strong>7.2</strong>
+            <div class="section-title">
+                <h3>Progress History</h3>
+                <p>Weekly development score</p>
             </div>
 
-            <div class="progress-item">
-                <span>Week 2</span>
-                <strong>7.8</strong>
+            <div class="progress-list">
+
+                <div class="progress-item">
+                    <div class="progress-info">
+                        <span>Week 1</span>
+                        <strong>7.2</strong>
+                    </div>
+
+                    <div class="progress-bar">
+                        <div class="progress-fill week1"></div>
+                    </div>
+                </div>
+
+                <div class="progress-item">
+                    <div class="progress-info">
+                        <span>Week 2</span>
+                        <strong>7.8</strong>
+                    </div>
+
+                    <div class="progress-bar">
+                        <div class="progress-fill week2"></div>
+                    </div>
+                </div>
+
+                <div class="progress-item">
+                    <div class="progress-info">
+                        <span>Week 3</span>
+                        <strong>8.1</strong>
+                    </div>
+
+                    <div class="progress-bar">
+                        <div class="progress-fill week3"></div>
+                    </div>
+                </div>
+
             </div>
 
-            <div class="progress-item">
-                <span>Week 3</span>
-                <strong>8.1</strong>
-            </div>
+        </section>
 
-        </div>
 
-    </section>
-
-</main>
     </main>
 
 
-    <footer>
+    <footer class="footer">
 
-        <p>
-            RPKL IT Organization
-        </p>
+        <div class="footer-top">
+
+            <div class="footer-brand">
+                <h2>RPKL</h2>
+                <p>Build • Create • Innovate</p>
+            </div>
+
+            <div class="footer-links">
+                <a href="../index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="divisions.html">Divisions</a>
+                <a href="login.html">Login</a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 RPKL IT Organization. All Rights Reserved.</p>
+        </div>
 
     </footer>
     <script src="../js/script.js"></script>
