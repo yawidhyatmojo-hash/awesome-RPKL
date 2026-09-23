@@ -5,10 +5,7 @@
 
     <meta charset="UTF-8">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Admin | RPKL</title>
 
@@ -20,219 +17,311 @@
 
 <body>
 
-   <header class="site-header">
+    <div class="admin-layout">
 
-        <h1 class="logo">RPKL ADMIN</h1>
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
 
-        <nav class="navbar">
-            <a href="../index.html" >Home</a>
-            <a href="dashboard.html" class="active">Dashboard</a>
-            <a href="profile.html">Profile</a>
-            <a href="login.html">Login</a>
-        </nav>
-
-    </header>
-
-
-
-    <main>
-
-        <h2>
-            Admin Dashboard
-        </h2>
-
-
-        <!-- PENDING SUBMISSIONS -->
-
-        <section>
-
-            <h3>
-                Pending Submissions
-            </h3>
-
-
-            <article>
-
-                <h4>
-                    Abi — Game Development
-                </h4>
-
-                <p>
-                    Completed enemy movement system
-                    and implemented basic AI behavior.
-                </p>
-
-                <p>
-                    Screenshot:
-                </p>
-
-                <p>
-                    [ Screenshot Preview ]
-                </p>
-
-
-                <label>
-                    Rating:
-                </label>
-
-                <select>
-
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                    <option>6</option>
-                    <option>7</option>
-                    <option>8</option>
-                    <option>9</option>
-                    <option>10</option>
-
-                </select>
-
-
-                <br><br>
-
-                <button>
-                    Accept
-                </button>
-
-                <button>
-                    Decline
-                </button>
-
-            </article>
-
-
-            <article>
-
-                <h4>
-                    Member B — Robotics
-                </h4>
-
-                <p>
-                    Completed motor control testing.
-                </p>
-
-                <p>
-                    Screenshot:
-                </p>
-
-                <p>
-                    [ Screenshot Preview ]
-                </p>
-
-
-                <label>
-                    Rating:
-                </label>
-
-                <select>
-
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                    <option>6</option>
-                    <option>7</option>
-                    <option>8</option>
-                    <option>9</option>
-                    <option>10</option>
-
-                </select>
-
-
-                <br><br>
-
-                <button>
-                    Accept
-                </button>
-
-                <button>
-                    Decline
-                </button>
-
-            </article>
-
-        </section>
-
-
-        <!-- DIVISION OVERVIEW -->
-
-        <section>
-
-            <h3>
-                Division Progress
-            </h3>
-
-            <p>
-                Game Development: 78%
-            </p>
-
-            <p>
-                Web Development: 72%
-            </p>
-
-            <p>
-                Robotics: 64%
-            </p>
-
-            <p>
-                Multimedia: 81%
-            </p>
-
-        </section>
-
-
-        <!-- MEMBER OVERVIEW -->
-
-        <section>
-
-            <h3>
-                Member Progress
-            </h3>
-
-            <p>
-                Abi — Game Development — 8.0
-            </p>
-
-            <p>
-                Member B — Robotics — 7.4
-            </p>
-
-            <p>
-                Member C — Web Development — 8.2
-            </p>
-
-        </section>
-
-    </main>
-
-
-    <footer class="footer">
-
-        <div class="footer-top">
-
-            <div class="footer-brand">
-                <h2>RPKL</h2>
-                <p>Build • Create • Innovate</p>
+            <div class="sidebar-logo">
+                <h1>RPKL</h1>
+                <span>ADMIN</span>
             </div>
 
-            <div class="footer-links">
-                <a href="../index.html">Home</a>
-                <a href="dashboard.html">Dashboard</a>
-                <a href="profile.html">Profile</a>
-                <a href="login.html">Login</a>
+            <div class="sidebar-profile">
+
+                <img src="../assets/images/dybala.jpg" alt="Abi">
+
+                <div>
+                    <h3>Abi</h3>
+                    <p>Administrator</p>
+                </div>
+
             </div>
+
+            <nav class="sidebar-menu">
+
+                <a href="admin.html" class="active">Dashboard</a>
+
+                <a href="#">Members</a>
+
+                <a href="#">Projects</a>
+
+                <a href="#">Divisions</a>
+
+                <a href="#">Settings</a>
+
+            </nav>
+
+            <div class="sidebar-footer">
+
+                <h4>RPKL</h4>
+
+                <span>Build • Create • Innovate</span>
+
+            </div>
+
+        </aside>
+
+
+        <!-- CONTENT -->
+        <div class="admin-content">
+
+            <!-- TOPBAR -->
+            <header class="topbar">
+                <div class="search-box">
+                    <span class="searc-icon">🔍</span>
+                    <input type="text" placeholder="Search members, projects, or divisions...">
+                </div>
+
+                <div class="topbar-right">
+
+                    <div class="notification">
+                        🔔
+                        <span class="notif-dot"></span>
+                    </div>
+
+                    <div class="admin-user">
+                        <img src="../assets/images/dybala.jpg" alt="Admin">
+
+                        <span>Admin</span>
+
+                    </div>
+                </div>
+            </header>
+
+            <!-- MAIN -->
+            <main class="admin-page">
+
+                <section class="welcome-banner">
+
+                    <div class="welcome-text">
+
+                        <span>ADMIN DASHBOARD</span>
+
+                        <h2>Welcome back, Admin 👋</h2>
+
+                        <p>
+                            Review member submissions, monitor progress,
+                            and help the RPKL organization grow.
+                        </p>
+
+                    </div>
+
+                    <button class="manage-btn">
+                        Manage Members
+                    </button>
+
+                </section>
+
+                <!-- ADMIN STATISTICS -->
+
+                <section class="admin-stats">
+
+                    <div class="stat-card">
+                        <div class="stat-icon">👥</div>
+                        <span>Total Members</span>
+                        <h3>12</h3>
+                        <p>+2 this week</p>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon">📋</div>
+                        <span>Pending Review</span>
+                        <h3>3</h3>
+                        <p>Needs attention</p>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon">✅</div>
+                        <span>Accepted</span>
+                        <h3>18</h3>
+                        <p>+4 this week</p>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon">🧩</div>
+                        <span>Divisions</span>
+                        <h3>4</h3>
+                        <p>All active</p>
+                    </div>
+
+                </section>
+
+                <div class="content-grid">
+
+
+                    <!-- PENDING SUBMISSIONS -->
+
+                    <section class="pending-section">
+
+                        <div class="section-header">
+                            <h2>Pending Submissions</h2>
+                            <select>
+                                <option>All Divisions</option>
+                                <option>Game Development</option>
+                                <option>Web Development</option>
+                                <option>Robotics</option>
+                            </select>
+                        </div>
+
+                        <article class="submission-card">
+
+                            <!-- LEFT -->
+                            <div class="project-preview">
+
+                                <img src="../assets/images/roblox.jpg" alt="Project Screenshot">
+
+                                <span class="preview-badge">
+                                    1 Screenshot
+                                </span>
+
+                            </div>
+
+                            <!-- CENTER -->
+                            <div class="submission-content">
+
+                                <div class="member-row">
+                                    <h3>Abi</h3>
+                                    <span class="division-tag">Game Development</span>
+                                </div>
+
+                                <h4>Enemy Movement System</h4>
+
+                                <p>
+                                    Completed enemy movement system and implemented
+                                    basic AI behavior.
+                                </p>
+
+                                <small>📅 Monday • 1 Screenshot</small>
+                            </div>
+
+                            <div class="review-panel">
+                                <label class="review-label">Project Rating</label>
+
+                                <select class="rating-select">
+                                    <option>6 / 10</option>
+                                    <option>7 / 10</option>
+                                    <option>8 / 10</option>
+                                    <option>9 / 10</option>
+                                    <option>10 / 10</option>
+                                </select>
+
+                                <button class="accept-btn"> ✓ Accept</button>
+                                <button class="decline-btn"> ✕ Decline</button>
+                            </div>
+                        </article>
+
+
+                    </section>
+
+                    <!---------Kanan-------->
+                    <aside class="side-panel">
+                        <!-- DIVISION OVERVIEW -->
+
+                        <section class="division-card">
+
+                            <h3>Division Progress</h3>
+                            <p class="card-subtitle">Overall progress for each division</p>
+
+                            <div class="division-item">
+                                <div class="division-info">
+                                    <span>🎮 Game Development</span>
+                                    <strong>78%</strong>
+                                </div>
+                                <div class="progress-track">
+                                    <div class="progress-fill game"></div>
+                                </div>
+                            </div>
+
+                            <div class="division-item">
+                                <div class="division-info">
+                                    <span>💻 Web Development</span>
+                                    <strong>72%</strong>
+                                </div>
+                                <div class="progress-track">
+                                    <div class="progress-fill web"></div>
+                                </div>
+                            </div>
+
+                            <div class="division-item">
+                                <div class="division-info">
+                                    <span>🤖 Robotics</span>
+                                    <strong>64%</strong>
+                                </div>
+                                <div class="progress-track">
+                                    <div class="progress-fill robot"></div>
+                                </div>
+                            </div>
+
+                            <div class="division-item">
+                                <div class="division-info">
+                                    <span>🎨 Multimedia</span>
+                                    <strong>81%</strong>
+                                </div>
+                                <div class="progress-track">
+                                    <div class="progress-fill media"></div>
+                                </div>
+                            </div>
+
+                        </section>
+
+
+                        <!-- MEMBER OVERVIEW -->
+
+                        <section class="member-card">
+
+                            <h3>Member Progress</h3>
+                            <p class="card-subtitle">Average rating from latest submissions</p>
+
+                            <div class="member-list">
+
+                                <div class="member-item">
+                                    <img src="../assets/images/dybala.jpg" alt="Abi">
+
+                                    <div class="member-text">
+                                        <h4>Abi</h4>
+                                        <span class="member-tag game">Game Development</span>
+                                    </div>
+
+                                    <strong>8.0</strong>
+                                </div>
+
+                                <div class="member-item">
+                                    <img src="../assets/images/dybala.jpg" alt="Member B">
+
+                                    <div class="member-text">
+                                        <h4>Member B</h4>
+                                        <span class="member-tag robot">Robotics</span>
+                                    </div>
+
+                                    <strong>7.4</strong>
+                                </div>
+
+                                <div class="member-item">
+                                    <img src="../assets/images/dybala.jpg" alt="Member C">
+
+                                    <div class="member-text">
+                                        <h4>Member C</h4>
+                                        <span class="member-tag web">Web Development</span>
+                                    </div>
+
+                                    <strong>8.2</strong>
+                                </div>
+
+                            </div>
+
+                        </section>
+                    </aside>
+                </div>
+            </main>
+
 
         </div>
 
-        <div class="footer-bottom">
-            <p>© 2026 RPKL IT Organization. All Rights Reserved.</p>
-        </div>
+    </div>
 
-    </footer>
+
+
 
 
 </body>
