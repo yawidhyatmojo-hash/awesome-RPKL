@@ -20,9 +20,13 @@
   "homepage": "https://github.com/yawidhyatmojo-hash/awesome-RPKL#readme",
   "dependencies": {
     "@tailwindcss/cli": "^4.3.3",
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "sqlite3": "^6.0.1",
     "tailwindcss": "^4.3.3"
   },
   "allowScripts": {
-    "@parcel/watcher@2.5.1": true
+    "@parcel/watcher@2.5.1": true,
+    "sqlite3@6.0.1": true
   }
 }
