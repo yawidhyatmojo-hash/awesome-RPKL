@@ -1,65 +1,132 @@
 /* =========================================
-   LOGIN PAGE
+   AUTH PAGE
 ========================================= */
 
+.auth-page{
+    min-height:100vh;
 
-.login-container {
-    width: 90%;
-    max-width: 450px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 
-    margin: 80px auto;
+    padding:30px;
+
+    background:
+    radial-gradient(circle at top,#1d4ed8 0%,#0b0f14 45%);
 }
 
-.login-card {
-    padding: 35px;
+/* =========================================
+   CARD
+========================================= */
 
-    background: #141b23;
+.auth-card{
+    width:100%;
+    max-width:430px;
 
-    border: 1px solid #293541;
-    border-radius: 14px;
+    padding:36px;
+
+    background:#111827;
+
+    border:1px solid #253244;
+    border-radius:22px;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.35);
 }
 
-.login-card h2 {
-    margin-top: 0;
-
-    text-align: center;
-    font-size: 32px;
+.auth-header{
+    text-align:center;
+    margin-bottom:28px;
 }
 
-.login-card label {
-    display: block;
-
-    margin-top: 20px;
-    margin-bottom: 8px;
+.auth-header h1{
+    margin:0;
+    color:white;
+    font-size:38px;
+    letter-spacing:1px;
 }
 
-.login-card input {
-    width: 100%;
-
-    padding: 12px;
-
-    background: #0e141b;
-    color: white;
-
-    border: 1px solid #293541;
-    border-radius: 8px;
+.auth-header p{
+    color:#94a3b8;
+    margin-top:8px;
 }
 
-.login-card button {
-    width: 100%;
+/* =========================================
+   FORM
+========================================= */
 
-    margin-top: 25px;
-    padding: 12px;
-
-    background: #273541;
-    color: white;
-
-    border: none;
-    border-radius: 8px;
-
-    cursor: pointer;
+.auth-form{
+    display:flex;
+    flex-direction:column;
+    gap:16px;
 }
 
-.login-card button:hover {
-    background: #394b5b;
+.auth-form label{
+    color:#cbd5e1;
+    font-size:14px;
+    font-weight:600;
+}
+
+.auth-form input,
+.auth-form select{
+    padding:13px 15px;
+
+    background:#0b1220;
+    color:white;
+
+    border:1px solid #334155;
+    border-radius:12px;
+
+    outline:none;
+    font-size:14px;
+
+    transition:.2s;
+}
+
+.auth-form input:focus,
+.auth-form select:focus{
+    border-color:#3b82f6;
+    box-shadow:0 0 0 3px rgba(59,130,246,.15);
+}
+
+.auth-form button{
+    margin-top:10px;
+    padding:14px;
+
+    background:#2563eb;
+    color:white;
+
+    border:none;
+    border-radius:12px;
+
+    font-size:15px;
+    font-weight:600;
+
+    cursor:pointer;
+    transition:.25s;
+}
+
+.auth-form button:hover{
+    background:#1d4ed8;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.auth-footer{
+    margin-top:22px;
+    text-align:center;
+
+    color:#94a3b8;
+    font-size:14px;
+}
+
+.auth-footer a{
+    color:#60a5fa;
+    text-decoration:none;
+    font-weight:600;
+}
+
+.auth-footer a:hover{
+    text-decoration:underline;
 }
