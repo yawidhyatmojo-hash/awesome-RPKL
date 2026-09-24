@@ -42,6 +42,39 @@ app.post("/register", (req, res) => {
 
 });
 
+//Login
+app.post("/login", (req, res) => {
+
+    //Ambil username & password
+    const { username, password } = req.body;
+
+    //Artinya SQLite mencari 1 user yang cocok
+    const sql = `
+        SELECT * FROM users
+        WHERE username = ? AND password = ?
+    `;
+
+    db.get(sql, [username, password], (err, user) => {
+
+        if (err) {
+            return res.status(500).json({
+                message: "Server error"
+            });
+        }
+
+        if (!user) {
+            return res.status(401).json({
+                message: "Username atau Password salah"
+            });
+        }
+
+        res.json({
+            message: "Login berhasil",
+            user: user
+        });
+    });
+});
+
 app.listen(PORT, () => {
     console.log(`Server ini berjalan di http://localhost:${PORT}`);
 });
