@@ -120,6 +120,28 @@
     font-weight: 600;
 }
 
+/* ---------- LOGOUT ---------- */
+
+.logout-btn{
+    padding:8px 14px;
+
+    border:none;
+    border-radius:10px;
+
+    background:#dc2626;
+    color:white;
+
+    font-size:13px;
+    font-weight:600;
+
+    cursor:pointer;
+    transition:.25s;
+}
+
+.logout-btn:hover{
+    background:#b91c1c;
+}
+
 /* ---------- MAIN ---------- */
 
 .dashboard-page {

@@ -61,6 +61,10 @@
 
                     <span id="topbarName">Abi</span>
 
+                    <button id="logoutBtn" class="logout-btn">
+                        Logout
+                    </button>
+
                 </div>
 
             </header>
@@ -183,20 +187,19 @@
                             <span>Today</span>
                         </div>
 
-                        <form class="submit-form">
+                        <form class="submit-form" id="progressForm">
 
-                            <label>Screenshot</label>
-                            <input type="file" accept="image/*">
+                            <label>Project Title</label>
+                            <input type="text" id="projectTitle" placeholder="Enemy Movement System">
 
                             <label>Description</label>
-                            <textarea placeholder="Describe today's progress..."></textarea>
+                            <textarea id="projectDesc" placeholder="Describe today's progress..."></textarea>
 
                             <button type="submit">
                                 Submit Progress
                             </button>
 
                         </form>
-
                     </section>
 
                 </div> <!-- main-grid -->
@@ -219,7 +222,7 @@
                                 <h4>Enemy Movement System</h4>
                                 <p>Monday • Game Development</p>
                             </div>
- 
+
                             <div class="recent-meta">
                                 <strong>8/10</strong>
                                 <span class="status accepted">Accepted</span>

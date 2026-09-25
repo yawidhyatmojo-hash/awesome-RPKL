@@ -16,6 +16,7 @@ app.get("/", (req, res) => {
     res.send("RPKL Backend running");
 });
 
+//register
 app.post("/register", (req, res) => {
 
     const { fullname, username, password, division } = req.body;
@@ -74,6 +75,57 @@ app.post("/login", (req, res) => {
         });
     });
 });
+
+// SUBMIT PROGRESS
+app.post("/submit", (req, res) => {
+
+    const { user_id, title, description } = req.body;
+
+    const sql = `
+        INSERT INTO submissions
+        (user_id, title, description)
+        VALUES (?, ?, ?)
+    `;
+
+    db.run(sql, [user_id, title, description], function(err){
+
+        if(err){
+            return res.status(500).json({
+                message:"Submit gagal"
+            });
+        }
+
+        res.json({
+            message:"Progress berhasil dikirim",
+            submissionId:this.lastID
+        });
+
+    });
+
+});
+
+//Ambil Semua Submission
+app.get("/submission", (req, res) => {
+
+    const sql = `SELECT
+            submissions.*,
+            users.fullname,
+            users.division
+        FROM submissions
+        JOIN users
+        ON submissions.user_id = users.id
+        ORDER BY submissions.created_at DESC`;
+
+    db.all(sql, [], (err, rows) => {
+         if (err) {
+            return res.status(500).json({
+                message: "Gagal mengambil data"
+            });
+        }
+
+        res.json(rows);
+    });
+})
 
 app.listen(PORT, () => {
     console.log(`Server ini berjalan di http://localhost:${PORT}`);
