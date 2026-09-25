@@ -105,7 +105,7 @@ app.post("/submit", (req, res) => {
 });
 
 //Ambil Semua Submission
-app.get("/submission", (req, res) => {
+app.get("/submissions", (req, res) => {
 
     const sql = `SELECT
             submissions.*,

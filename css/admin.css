@@ -700,8 +700,22 @@
 
 .stats-card,
 .side-card,
+
+#submissionList{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
 .submission-card {
     transition: .25s;
+    background: #101b31;
+    border: 1px solid #214070;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
 }
 
 .stats-card:hover,
@@ -712,4 +726,113 @@
     border-color: #3b82f6;
 
     box-shadow: 0 10px 30px rgba(37, 99, 235, .18);
+}
+
+.submission-card h3{
+    color:#fff;
+    margin-bottom:10px;
+}
+
+.submission-card p{
+    color:#cbd5e1;
+    margin:6px 0;
+}
+
+.submission-card span{
+    display:inline-block;
+    margin-top:10px;
+    padding:6px 12px;
+    border-radius:999px;
+    background:#2563eb;
+    color:white;
+    font-size:13px;
+}
+
+
+/* KIRI */
+.submission-left{
+    position:relative;
+}
+
+.submission-left img{
+    width:180px;
+    height:120px;
+    object-fit:cover;
+    border-radius:14px;
+}
+
+.shot-badge{
+    position:absolute;
+    top:10px;
+    right:10px;
+
+    background:#2563eb;
+    color:#fff;
+
+    padding:5px 10px;
+    border-radius:999px;
+    font-size:12px;
+}
+
+/* TENGAH */
+.submission-middle{
+    flex:1;
+}
+
+.member-row{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:10px;
+}
+
+.member-row h3{
+    margin:0;
+    color:#fff;
+}
+
+.division-tag{
+    background:#1d4ed8;
+    color:white;
+
+    padding:6px 12px;
+    border-radius:999px;
+    font-size:12px;
+}
+
+.submission-middle h2{
+    color:#fff;
+    margin-bottom:10px;
+}
+
+.submission-middle p{
+    color:#b7c5d8;
+    line-height:1.7;
+}
+
+.submission-middle small{
+    color:#7f93ac;
+}
+
+/* KANAN */
+.submission-right{
+    width:170px;
+
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+.submission-right label{
+    color:white;
+    font-weight:600;
+}
+
+.submission-right select{
+    background:#07111f;
+    color:white;
+
+    border:1px solid #284569;
+    border-radius:10px;
+    padding:10px;
 }
