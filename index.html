@@ -20,23 +20,23 @@
 
     <header class="site-header">
 
-    <a href="index.html" class="logo">RPKL</a>
+        <a href="index.html" class="logo">RPKL</a>
 
-    <nav>
-        <ul class="nav-links">
+        <nav>
+            <ul class="nav-links">
 
-            <li><a href="../index.html" class="active">Home</a></li>
+                <li><a href="../index.html" class="active">Home</a></li>
 
-            <li><a href="about.html">About</a></li>
+                <li><a href="pages/about.html">About</a></li>
 
-            <li><a href="divisions.html">Divisions</a></li>
+                <li><a href="pages/divisions.html">Divisions</a></li>
 
-            <li><a href="login.html">Login</a></li>
+                <li><a href="pages/login.html">Login</a></li>
 
-        </ul>
-    </nav>
+            </ul>
+        </nav>
 
-</header>
+    </header>
 
 
     <!-- MAIN WEBSITE -->
@@ -47,9 +47,7 @@
 
         <section class="hero">
 
-            <div class="hero-bg"></div>
-
-            <div class="hero-content">
+            <div class="hero-left">
 
                 <span>RPKL IT ORGANIZATION</span>
 
@@ -60,18 +58,32 @@
                 </h1>
 
                 <p>
-                    Learn programming, robotics, multimedia, and game
-                    development together in one collaborative community.
+                    Learn programming, robotics, multimedia, and game development
+                    together in one collaborative community.
                 </p>
 
                 <div class="hero-buttons">
-                    <a href="pages/about.html" class="btn-primary">
-                        Explore
-                    </a>
+                    <a href="pages/about.html" class="btn-primary">Explore</a>
+                    <a href="pages/login.html" class="btn-secondary">Login</a>
+                </div>
 
-                    <a href="pages/login.html" class="btn-secondary">
-                        Login
-                    </a>
+            </div>
+
+
+            <div class="hero-right">
+
+                <div class="hero-slider">
+
+                    <div class="slide active"></div>
+                    <div class="slide"></div>
+                    <div class="slide"></div>
+
+                </div>
+
+                <div class="slider-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
                 </div>
 
             </div>
@@ -81,84 +93,66 @@
 
         <!-- ABOUT PREVIEW -->
 
-        <section class="intro">
+        <section class="why-rpkl reveal">
 
-            <h2>
-                Technology Starts With People
-            </h2>
+            <span>WHY RPKL</span>
+
+            <h2>Technology Starts With People</h2>
 
             <p>
-                RPKL is an organization where students
-                collaborate to build, experiment, and
-                develop technology projects.
+                RPKL is a collaborative student IT organization where members learn,
+                build real projects, and grow together through technology.
             </p>
 
         </section>
 
 
-        <!-- DIVISION PREVIEW -->
+        <section class="division-preview reveal">
 
-        <section class="divisions-preview">
+            <div class="section-title">
 
-            <h2>Our Divisions</h2>
+                <span>OUR DIVISIONS</span>
 
-
-            <div class="division-container">
-
-
-                <div class="division-card">
-
-                    <h3>
-                        Game Development
-                    </h3>
-
-                    <p>
-                        Games and interactive experiences.
-                    </p>
-
-                </div>
-
-
-                <div class="division-card">
-
-                    <h3>
-                        Web Development
-                    </h3>
-
-                    <p>
-                        Websites and web applications.
-                    </p>
-
-                </div>
-
-
-                <div class="division-card">
-
-                    <h3>
-                        Robotics
-                    </h3>
-
-                    <p>
-                        Robotics and intelligent systems.
-                    </p>
-
-                </div>
-
-
-                <div class="division-card">
-
-                    <h3>
-                        Multimedia
-                    </h3>
-
-                    <p>
-                        Video editing and graphic design.
-                    </p>
-
-                </div>
-
+                <h2>Choose Your Learning Path</h2>
 
             </div>
+
+            <div class="division-grid">
+
+                <article class="division-card">
+                    <h3>🎮 Game Development</h3>
+                    <p>Unity, C#, gameplay systems and interactive experiences.</p>
+                </article>
+
+                <article class="division-card">
+                    <h3>💻 Web Development</h3>
+                    <p>HTML, CSS, JavaScript and modern web applications.</p>
+                </article>
+
+                <article class="division-card">
+                    <h3>🤖 Robotics</h3>
+                    <p>Arduino, IoT, automation and intelligent hardware.</p>
+                </article>
+
+                <article class="division-card">
+                    <h3>🎨 Multimedia</h3>
+                    <p>Graphic design, motion graphics and video production.</p>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <section class="home-cta reveal">
+
+            <h2>Ready to Build Your First Project?</h2>
+
+            <p>Join RPKL and collaborate with students across multiple IT fields.</p>
+
+            <a href="pages/login.html" class="btn-primary">
+                Get Started
+            </a>
 
         </section>
 

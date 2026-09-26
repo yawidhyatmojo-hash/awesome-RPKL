@@ -1,3 +1,75 @@
+const reveals = document.querySelectorAll(".reveal");
+
+//Ini API browser untuk mendeteksi apakah sebuah elemen masuk ke layar.
+const observer = new IntersectionObserver((entries) => {
+
+    entries.forEach((entry) => {
+
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+        }
+
+    });
+
+}, {
+    threshold: 0.2
+});
+
+reveals.forEach((section) => {
+    observer.observe(section);
+});
+
+/* ==========================
+   HERO SLIDER
+========================== */
+
+const slides = document.querySelectorAll(".slide");
+const dots = document.querySelectorAll(".dot");
+
+let current = 0;
+let autoSlide;
+
+// Menampilkan slide tertentu
+function showSlide(index) {
+
+    slides.forEach(slide => {
+        slide.classList.remove("active");
+    });
+
+    dots.forEach(dot => {
+        dot.classList.remove("active");
+    });
+
+    slides[index].classList.add("active");
+    dots[index].classList.add("active");
+
+    current = index;
+}
+
+// Slide berikutnya
+function nextSlide() {
+
+    let next = current + 1;
+
+    if (next >= slides.length) {
+        next = 0;
+    }
+
+    showSlide(next);
+}
+
+
+// Auto jalan setiap 4 detik
+function startSlider() {
+
+    autoSlide = setInterval(() => {
+        nextSlide();
+    }, 4000);
+
+}
+
+startSlider();
+
 let submissions = [
     {
         id: 1,
@@ -129,7 +201,22 @@ function displayMemberAverage() {
 displayMemberAverage();
 
 console.log(
-        calculateMemberAverage("Abi"),
-        acceptSubmission(6, 10),
-        declineSubmission(1)
+    calculateMemberAverage("Abi"),
+    acceptSubmission(6, 10),
+    declineSubmission(1)
 );
+
+/* ==========================
+   DOT CLICK
+========================== */
+dots.forEach((dot,index)=> {
+      dot.style.cursor = "pointer";
+    dot.addEventListener("click", ()=>{
+        
+        clearInterval(autoSlide);
+
+        showSlide(index);
+
+        startSlider();
+    });
+});
