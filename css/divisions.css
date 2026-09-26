@@ -2,73 +2,245 @@
    DIVISIONS PAGE
 ========================================= */
 
-.divisions-container {
-    width: 88%;
-    max-width: 960px;
-
-    margin: 60px auto;
+/* ===== HERO ===== */
+.division-hero {
+    max-width: 1200px;
+    margin: 40px auto 70px;
+    padding: 50px;
 
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 50px;
+
+    border-radius: 28px;
+    background: linear-gradient(135deg, #2563eb, #0f172a);
+    align-items: center;
 }
 
-/* =========================================
-   PAGE INTRO
-========================================= */
+.hero-content span {
+    color: #93c5fd;
+    font-size: .9rem;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
 
-.page-intro {
-    grid-column: 1 / -1;
 
+.hero-content h1 {
+    margin: 18px 0;
+    font-size: 3.6rem;
+    line-height: 1.05;
+    color: white;
+}
+
+.hero-content h1 strong {
+    color: #60a5fa;
+}
+
+.hero-content p {
+    color: #dbeafe;
+    line-height: 1.8;
+    max-width: 500px;
+}
+
+.hero-image {
+    height: 340px;
+    border-radius: 22px;
+    background-image: url("../assets/images/RPKL11.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.hero-dots span {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #64748b;
+}
+
+.hero-dots .active {
+    width: 30px;
+    border-radius: 20px;
+    background: white;
+}
+
+
+/* ==========================
+   DIVISION SECTION
+========================== */
+
+.division-section {
+    max-width: 1200px;
+    margin: 0 auto 80px;
+}
+
+.section-title {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 45px;
 }
 
-.page-intro h2 {
-    margin-bottom: 10px;
-    font-size: 42px;
+.section-title span {
+    color: #60a5fa;
+    letter-spacing: 2px;
+    font-weight: 600;
+    font-size: .9rem;
 }
 
-.page-intro p {
-    color: #aeb9c4;
-    font-size: 18px;
+.section-title h2 {
+    color: #fff;
+    font-size: 2.5rem;
+    margin: 12px 0;
 }
 
-/* =========================================
-   DIVISION CARDS
-========================================= */
+.section-title p {
+    color: #94a3b8;
+    max-width: 650px;
+    margin: auto;
+    line-height: 1.8;
+}
+
+/*Grid*/
+.division-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+}
 
 .division-card {
-    padding: 24px;
-
-     background: linear-gradient(180deg, #111827 0%, #0f172a 100%);
-
-    border: 1px solid rgba(255,255,255,.08);
-    border-radius: 18px;
-
-    min-height: 210px;
-
-    transition:
-        0.25s ease;
+    background: #111827;
+    border: 1px solid #233047;
+    border-radius: 22px;
+    padding: 28px;
+    transition: .35s;
 }
 
 .division-card:hover {
-    transform: translateY(-4px);
-    border-color: #526170;
+    transform: translateY(-8px);
+    box-shadow: 0 18px 45px rgba(37, 99, 235, .15);
 }
 
-.division-card h2 {
-    margin-top: 0;
-    margin-bottom: 15px;
-
-    font-size: 25px;
+/*Header*/
+.card-top {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 18px;
 }
 
-.division-card p {
-    color: #b9c4ce;
+.icon-box {
+    width: 64px;
+    height: 64px;
+    border-radius: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    background: #1d4ed8;
+}
 
-    line-height: 1.7;
-    margin: 0;
+.card-top h3 {
+    color: white;
+    margin-bottom: 6px;
+}
+
+.badge {
+    background: #2563eb;
+    color: white;
+
+    padding: 4px 10px;
+    border-radius: 30px;
+
+    font-size: .72rem;
+}
+
+.purple {
+    background: #7c3aed;
+}
+
+.green {
+    background: #16a34a;
+}
+
+.orange {
+    background: #ea580c;
+}
+
+/*TechStack*/
+.tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 22px 0;
+}
+
+.tech-list span {
+    background: #1e293b;
+    color: #cbd5e1;
+    padding: 8px 14px;
+    border-radius: 30px;
+    font-size: .8rem;
+}
+
+/*Footer card*/
+.card-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 18px;
+}
+
+.card-bottom small {
+    color: #94a3b8;
+}
+
+.card-bottom a {
+    color: #60a5fa;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* ===== CARD LAYOUT ===== */
+
+.card-content{
+    display:grid;
+    grid-template-columns:1.6fr 1fr;
+    gap:20px;
+    align-items:center;
+}
+
+.card-image{
+    width:100%;
+    height:190px;
+
+    border-radius:16px;
+
+    background-size:cover;
+    background-position:center;
+
+    transition:.35s;
+}
+
+.game-img{
+    background-image:url("../assets/images/gamedev.png");
+}
+
+.web-img{
+    background-image:url("../assets/images/web.png");
+}
+
+.robot-img{
+    background-image:url("../assets/images/robotic.png");
+}
+
+.media-img{
+    background-image:url("../assets/images/multi.png");
 }
 
 /* =========================================
@@ -80,33 +252,7 @@
     min-height: auto;
 }
 
-/* =========================================
-   SUBDIVISIONS
-========================================= */
 
-.subdivisions {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-
-    gap: 18px;
-    margin-top: 25px;
-}
-
-.subdivision-card {
-    padding: 22px;
-
-    background: #0e141b;
-
-    border: 1px solid #252f39;
-    border-radius: 10px;
-}
-
-.subdivision-card h3 {
-    margin-top: 0;
-    margin-bottom: 10px;
-
-    font-size: 19px;
-}
 
 /* =========================================
    MOBILE
