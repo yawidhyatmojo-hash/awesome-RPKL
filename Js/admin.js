@@ -1,5 +1,6 @@
 const submissionList = document.getElementById("submissionList");
 
+
 async function loadSubmissions() {
 
     const response = await fetch("http://localhost:3000/submissions");
@@ -9,12 +10,16 @@ async function loadSubmissions() {
 
     data.forEach((submission) => {
 
+const imageUrl = submission.screenshot
+?`http://localhost:3000/uploads/${submission.screenshot}`
+ : "../assets/images/placeholder.jpg";
+
         submissionList.innerHTML += `
 <div class="submission-card">
 
     <div class="submission-left">
 
-        <img src="../assets/images/roblox.jpg" alt="project">
+        <img src="${imageUrl}" alt="project">
 
         <span class="shot-badge">1 Screenshot</span>
 

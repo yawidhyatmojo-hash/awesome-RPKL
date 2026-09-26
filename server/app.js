@@ -1,5 +1,7 @@
 const express = require("express");
 const cors = require("cors");
+const multer = require("multer");
+const path = require("path");
 
 const db = require("./db");
 
@@ -10,6 +12,29 @@ const PORT = 3000;
 app.use(cors());
 app.use(express.json()); //Fungsinya membaca data JSON dari frontend.
 //Tanpa middleware ini, backend tidak bisa membacanya.
+app.use("/uploads", express.static("uploads"));
+
+// ==========================
+// MULTER CONFIG
+// ==========================
+
+const storage = multer.diskStorage({
+
+    destination: (req, file, cb) => {
+        cb(null, "uploads/");
+    },
+
+    filename: (req, file, cb) => {
+
+        const uniqueName =
+            Date.now() + path.extname(file.originalname);
+
+        cb(null, uniqueName);
+    }
+
+});
+
+const upload = multer({ storage });
 
 //Test Route
 app.get("/", (req, res) => {
@@ -77,30 +102,37 @@ app.post("/login", (req, res) => {
 });
 
 // SUBMIT PROGRESS
-app.post("/submit", (req, res) => {
+app.post("/submit", upload.single("screenshot"), (req, res) => {
 
     const { user_id, title, description } = req.body;
 
+    const screenshot = req.file
+        ? req.file.filename
+        : null;
+
     const sql = `
         INSERT INTO submissions
-        (user_id, title, description)
-        VALUES (?, ?, ?)
+        (user_id, title, description, screenshot)
+        VALUES (?, ?, ?, ?)
     `;
 
-    db.run(sql, [user_id, title, description], function(err){
+    db.run(
+        sql,
+        [user_id, title, description, screenshot],
+        function(err){
 
-        if(err){
-            return res.status(500).json({
-                message:"Submit gagal"
+            if(err){
+                return res.status(500).json({
+                    message:"Submit gagal"
+                });
+            }
+
+            res.json({
+                message:"Project berhasil dikirim"
             });
+
         }
-
-        res.json({
-            message:"Progress berhasil dikirim",
-            submissionId:this.lastID
-        });
-
-    });
+    );
 
 });
 

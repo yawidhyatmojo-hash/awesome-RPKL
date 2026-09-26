@@ -27,31 +27,45 @@ logoutBtn.addEventListener("click", () => {
 const progressForm = document.getElementById("progressForm");
 
 progressForm.addEventListener("submit", async (e) => {
+
     e.preventDefault();
 
-    const title = document.getElementById("projectTitle").value;
-    const description = document.getElementById("projectDesc").value;
+    const title =
+        document.getElementById("projectTitle").value;
+
+    const description =
+        document.getElementById("projectDesc").value;
+
+    const image =
+        document.getElementById("projectImage").files[0];
+
+    const formData = new FormData();
+
+    formData.append("user_id", user.id);
+    formData.append("title", title);
+    formData.append("description", description);
+    formData.append("screenshot", image);
 
     const response = await fetch("http://localhost:3000/submit", {
+
         method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-            user_id: user.id,
-            title,
-            description
-        })
+
+        body: formData
+
     });
 
     const result = await response.json();
 
     if (response.ok) {
-        alert("Progress berhasil dikirim!");
+
+        alert("Project berhasil dikirim!");
 
         progressForm.reset();
 
     } else {
+
         alert(result.message);
+
     }
+
 });

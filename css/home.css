@@ -3,22 +3,106 @@
 ========================================= */
 
 .hero {
-    text-align: center;
-    padding: 100px 20px;
+    position: relative;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+
+    padding: 0 8%;
+    
+
+    overflow: hidden;
 }
 
-.hero h2 {
-    font-size: 50px;
-    margin-bottom: 15px;
+.hero-bg{
+    position:absolute;
+    inset:0;
+
+    background:url("../assets/images/indah.png") center/cover;
+
+    animation: kenburns 25s ease-in-out infinite alternate;
 }
 
-.hero p {
-    max-width: 700px;
-    margin: 0 auto;
+.hero-content{
+    position:relative;
+    z-index:2;
 
-    color: #aeb9c4;
-    font-size: 18px;
-    line-height: 1.7;
+    max-width:650px;
+}
+
+.hero-content span{
+    color:#93c5fd;
+    letter-spacing:2px;
+    font-size:14px;
+    font-weight:600;
+}
+
+.hero-content h1{
+    color:white;
+    font-size:64px;
+    line-height:1.1;
+    margin:18px 0;
+}
+
+.hero-content p{
+    color:#d1d5db;
+    line-height:1.8;
+    margin-bottom:30px;
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+
+    background:
+        linear-gradient(
+            rgba(8,15,32,.55),
+            rgba(8,15,32,.45)
+        );
+
+    z-index:1;
+}
+
+
+/* ==========================
+   HERO BUTTONS
+========================== */
+.hero-buttons{
+    display: flex;
+    gap: 16px;
+    margin-top: 32px;
+}
+
+.btn-primary,
+.btn-secondary{
+    text-decoration:none;
+    padding:14px 28px;
+    border-radius:999px;
+    font-weight:600;
+    transition:.3s ease;
+}
+
+.btn-primary{
+    background:#2563eb;
+    color:white;
+}
+
+.btn-primary:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 25px rgba(37,99,235,.35);
+}
+
+.btn-secondary{
+    border:1px solid rgba(255,255,255,.35);
+    color:white;
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(10px);
+}
+
+.btn-secondary:hover{
+    background:rgba(255,255,255,.16);
+    transform:translateY(-3px);
 }
 
 .intro {
@@ -114,7 +198,8 @@
 
     line-height: 1.6;
 }
-button{
+
+button {
     padding: 17px 29px;
 
     background: #1e2a38;
@@ -139,6 +224,18 @@ button{
 
     .division-container {
         grid-template-columns: 1fr;
+    }
+
+}
+
+@keyframes kenburns{
+
+    from{
+        transform:scale(1);
+    }
+
+    to{
+        transform:scale(1.08) translate(-12px,-6px);
     }
 
 }

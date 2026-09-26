@@ -759,6 +759,7 @@
     height:120px;
     object-fit:cover;
     border-radius:14px;
+      border:1px solid #29466d;
 }
 
 .shot-badge{
