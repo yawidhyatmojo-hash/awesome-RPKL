@@ -47,19 +47,43 @@ main {
 
     padding: 0 70px;
 
-    background: rgba(6, 12, 24, 0.95);
+
+    background: linear-gradient(90deg,
+            #020817 0%,
+            #071733 45%,
+            #0b1730 75%,
+            #030b18 100%);
     backdrop-filter: blur(14px);
 
     border-bottom: 1px solid rgba(255, 255, 255, .08);
 
-    z-index: 99999;
+
+}
+
+.site-header::after{
+    content:"";
+
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+
+    height:1px;
+
+    background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(96,165,250,.55),
+        transparent
+    );
 }
 
 .logo {
     color: #fff;
     text-decoration: none;
     font-size: 2rem;
-    font-weight: 700;
+    font-weight: 800;
+    letter-spacing: .5px;
 }
 
 .nav-links {
@@ -75,7 +99,7 @@ main {
     color: #d1d5db;
     text-decoration: none;
     font-weight: 500;
-
+     color:#dbeafe;
     transition: .25s;
 }
 
