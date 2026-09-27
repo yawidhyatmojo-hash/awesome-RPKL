@@ -1,6 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
 /* =========================================
    DASHBOARD LAYOUT
-========================================= */
+=========================================
+
+*/
+.menu-btn{
+    display:none;
+
+    background:none;
+    border:none;
+
+    color:white;
+    font-size:1.7rem;
+    cursor:pointer;
+}
+
 .dashboard-layout {
     display: flex;
     min-height: 100vh;
@@ -457,46 +481,156 @@
    RESPONSIVE
 ========================================= */
 
-@media (max-width: 1024px) {
+/* ==========================
+   TABLET
+========================== */
 
-    .stats-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+@media (max-width:1023px){
 
-    .main-grid {
-        grid-template-columns: 1fr;
-    }
+.dashboard-layout{
+    grid-template-columns:88px 1fr;
+}
+
+/* sidebar mengecil */
+.sidebar{
+    width:88px;
+    padding:20px 12px;
+}
+
+.sidebar-logo .logo{
+    font-size:1.5rem;
+}
+
+.sidebar-profile{
+    flex-direction:column;
+    text-align:center;
+    gap:8px;
+}
+
+.sidebar-profile img{
+    width:48px;
+    height:48px;
+}
+
+.sidebar-profile h3,
+.sidebar-profile span{
+    display:none;
+}
+
+.sidebar-menu a{
+    justify-content:center;
+    padding:14px;
+}
+
+.sidebar-menu a span{
+    display:none;
+}
+
+/* topbar */
+.topbar{
+    padding:18px 22px;
+}
+
+.topbar input{
+    max-width:280px;
+}
+
+/* stats */
+.stats-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.main-grid{
+    grid-template-columns:1fr;
+}
 
 }
 
-@media (max-width: 768px) {
+/* ==========================
+   MOBILE
+========================== */
 
-    .dashboard-layout {
-        flex-direction: column;
-    }
+@media (max-width:767px){
 
-    .sidebar {
-        width: 100%;
-        border-right: none;
-        border-bottom: 1px solid #1e293b;
-    }
+.dashboard-layout{
+    display:block;
+}
 
-    .welcome-banner {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 20px;
-    }
+.menu-btn{
+    display:block;
+}
 
-    .stats-grid {
-        grid-template-columns: 1fr;
-    }
+/* Sidebar disembunyikan */
+.sidebar{
+    position:fixed;
+    top:0;
+    left:-260px;
 
-    .topbar {
-        padding: 0 16px;
-    }
+    width:240px;
+    height:100vh;
 
-    .topbar input {
-        width: 180px;
-    }
+    transition:.3s;
+    z-index:1000;
+}
+
+.sidebar.show{
+    left:0;
+}
+
+/* Topbar */
+.topbar{
+    position:sticky;
+    top:0;
+
+    background:#091326;
+    z-index:100;
+
+    padding:16px;
+}
+
+.topbar input{
+    display:none;
+}
+
+.topbar-user span{
+    display:none;
+}
+
+/* isi dashboard */
+.dashboard-page{
+    padding:20px 16px;
+}
+
+.welcome-banner{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:18px;
+}
+
+.welcome-banner h2{
+    font-size:2rem;
+}
+
+.manage-btn{
+    width:100%;
+}
+
+/* stats */
+.stats-grid{
+    grid-template-columns:1fr 1fr;
+    gap:14px;
+}
+
+/* chart + submit */
+.main-grid{
+    grid-template-columns:1fr;
+}
+
+/* recent */
+.recent-item{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:10px;
+}
 
 }

@@ -38,29 +38,35 @@
     </header>
 
 
-    <main class="auth-page">
+    <main class="login-page">
 
-        <section class="auth-card">
+        <section class="login-card">
 
-            <div class="auth-header">
+            <div class="login-header">
                 <h1>RPKL</h1>
                 <p>Login to your account</p>
             </div>
 
-            <form id="loginForm">
+            <form id="loginForm" class="login-form">
 
-                <input id="username" type="text" placeholder="Enter username">
+                <div class="input-group">
+                    <label>Username</label>
+                    <input type="text" id="username" placeholder="Enter username">
+                </div>
 
-                <input id="password" type="password" placeholder="Enter password">
+                <div class="input-group">
+                    <label>Password</label>
+                    <input type="password" id="password" placeholder="Enter password">
+                </div>
 
-                <button type="submit">
+                <button type="submit" class="login-btn">
                     Login
                 </button>
 
             </form>
 
-            <div class="login-note">
-                <p><strong>Account Access</strong></p>
+            <div class="login-info">
+                <h4>Account Access</h4>
                 <p>
                     Member accounts are created by the RPKL administrator.
                     Please contact your division admin to obtain your username
