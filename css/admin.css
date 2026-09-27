@@ -1,22 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    background: #050b16;
+    overflow-x: hidden;
+}
+
+.section-header{
+    margin-bottom:28px;
+}
+
 /* =========================================
    ADMIN LAYOUT
 ========================================= */
 .admin-layout {
-    display: flex;
+    display: grid;
     min-height: 100vh;
+    grid-template-columns: 195px 1fr;
+    background: #050B16;
+}
+
+.admin-content {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
 }
 
 /* =========================================
    SIDEBAR
 ========================================= */
 .sidebar {
-    width: 240px;
-    padding: 28px 22px;
-    display: flex;
-    flex-direction: column;
-    background: #0f172a;
-    border-right: 1px solid #1e293b;
+    background: #081224;
+    border-right: 1px solid rgba(255, 255, 255, .05);
+    padding: 24px 18px;
+
 }
+
+.side-panel{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
 
 /* ---------- Logo ---------- */
 .sidebar-logo h1 {
@@ -67,12 +98,16 @@
     gap: 10px;
 }
 
+
 .sidebar-menu a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    color: #B7C7E5;
+    border-radius: 14px;
+    padding: 13px 14px;
     text-decoration: none;
-    color: #cbd5e1;
-    padding: 12px 16px;
-    border-radius: 12px;
-    transition: .25s;
 }
 
 .sidebar-menu a:hover,
@@ -121,14 +156,54 @@
     align-items: center;
     padding: 0 28px;
 
-    background: #111827;
-    border-bottom: 1px solid #1e293b;
+    background: linear-gradient(90deg,
+            #08101f,
+            #0b1730,
+            #08101f);
+    border-bottom: 1px solid rgba(96, 165, 250, .12);
+
+    flex-shrink: 0;
+
 }
 
+.topbar input {
+    width: 310px;
+    height: 40px;
+
+    background: #16243A;
+
+    border: 1px solid #2B3F5D;
+
+    border-radius: 12px;
+
+    color: white;
+
+    padding: 0 16px;
+}
+
+.topbar input::placeholder {
+    color: #7F93B5;
+}
+
+/*Top and content Grid*/
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 360px;
+    gap: 22px;
+    align-items: start;
+}
+
+.top-grid{
+    display:grid;
+    grid-template-columns:1fr 340px;
+    gap:22px;
+    margin-bottom:18px;
+}
 /* ---------- Search ---------- */
+
 .search-box {
     width: 420px;
-    height: 46px;
+    height: 42px;
     display: flex;
     align-items: center;
     gap: 12px;
@@ -224,22 +299,33 @@
     padding: 24px;
 }
 
+.top-grid,
+.content-grid{
+    max-width: 1600px;
+}
+
 /* =========================================
    WELCOME BANNER
 ========================================= */
 .welcome-banner {
-    position: relative;
-    overflow: hidden;
+    height: 195px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 32px 36px;
-    margin-bottom: 28px;
+    padding:  34px 42px;
+    
+    position:relative;
+    overflow:hidden;
     border-radius: 22px;
-    background: linear-gradient(135deg,
+    background:
+        radial-gradient(circle at right,
+            rgba(255, 255, 255, .06),
+            transparent 35%),
+        linear-gradient(135deg,
             #1d4ed8,
             #2563eb,
             #1e40af);
+   
 }
 
 .welcome-banner::before {
@@ -266,16 +352,17 @@
     letter-spacing: 1.5px;
 }
 
-.welcome-text h2 {
-    margin: 12px 0;
+.welcome-banner h2 {
+    font-size: 2.4rem;
     color: white;
-    font-size: 38px;
+    line-height: 1.1;
+    margin: 8px 0 14px;
 }
 
-.welcome-text p {
-    max-width: 520px;
+.welcome-banner p {
+    width: 480px;
     color: #dbeafe;
-    line-height: 1.7;
+    line-height: 1.8;
 }
 
 .manage-btn {
@@ -296,83 +383,67 @@
     background: rgba(255, 255, 255, .2);
 }
 
-/* =========================================
-   ADMIN STATISTICS
-========================================= */
-
-.admin-stats {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 18px;
-
-    margin-bottom: 30px;
-}
-
-.stat-card {
-    padding: 22px;
-    background: #111827;
-    border: 1px solid #253244;
-    border-radius: 18px;
-
-    transition: .25s;
-}
-
-.stat-card:hover {
-    transform: translateY(-5px);
-    border-color: #3b82f6;
-    box-shadow: 0 10px 25px rgba(37, 99, 235, .15);
-}
-
-.stat-icon {
-    width: 52px;
-    height: 52px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    margin-bottom: 18px;
-
-    border-radius: 14px;
-
-    background: rgba(37, 99, 235, .15);
-    font-size: 24px;
-}
-
-.stat-card span {
-    display: block;
-    color: #94a3b8;
-    font-size: 13px;
-}
-
-.stat-card h3 {
-    margin: 10px 0 8px;
-    color: white;
-    font-size: 34px;
-}
-
-.stat-card p {
-    margin: 0;
-    color: #22c55e;
-    font-size: 13px;
-}
-
-/* =========================================
-   CONTENT GRID
-========================================= */
-
-.content-grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 22px;
-    align-items: start;
-}
 
 /*kiri*/
 .pending-section {
+    background: #0C172B;
+
+    border: 1px solid rgba(59, 130, 246, .15);
+
+    border-radius: 22px;
+
+    padding: 26px;
+
+    min-height: 520px;
+}
+
+.section-title{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    margin-bottom:26px;
+}
+
+.section-title h2{
+    color:white;
+    font-size:32px;
+}
+
+.section-title select{
+    background:#13233F;
+    color:white;
+
+    border:1px solid #28466A;
+
+    border-radius:10px;
+
+    padding:10px 14px;
+}
+
+.empty-state {
+    height: 340px;
+
     display: flex;
     flex-direction: column;
-    gap: 18px;
+    justify-content: center;
+    align-items: center;
+
+    color: #8ea3c7;
+
+    text-align: center;
+}
+
+.empty-icon {
+    font-size: 64px;
+
+    margin-bottom: 18px;
+}
+
+.empty-state h3 {
+    color: white;
+
+    margin-bottom: 10px;
 }
 
 /* kanan */
@@ -394,12 +465,6 @@
 /* =========================================
    PENDING SUBMISSIONS
 ========================================= */
-.section-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 18px;
-}
 
 .section-header h2 {
     margin: 0;
@@ -517,6 +582,62 @@
     background: #dc2626;
     color: white;
     border: none;
+}
+
+/* ==========================
+   CREATE MEMBER
+========================== */
+.create-member-card{
+    
+    
+    background:#0C172B;
+    border:1px solid rgba(59,130,246,.15);
+
+    border-radius:22px;
+
+    padding:18px;
+}
+
+.create-member-card h3{
+    color:white;
+    font-size:24px;
+    margin-bottom:6px;
+}
+
+.create-form{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    margin-top:18px;
+}
+
+.create-form input,
+.create-form select{
+    height:44px;
+
+    background:#13233F;
+
+    border:1px solid #28466A;
+
+    border-radius:12px;
+
+    color:white;
+
+    padding:0 14px;
+}
+
+.create-btn{
+    height:46px;
+
+    background:#1663FF;
+
+    border:none;
+
+    border-radius:12px;
+
+    color:white;
+
+    font-weight:700;
 }
 
 /* =========================================
@@ -701,10 +822,10 @@
 .stats-card,
 .side-card,
 
-#submissionList{
-    display:flex;
-    flex-direction:column;
-    gap:18px;
+#submissionList {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
 }
 
 .submission-card {
@@ -728,112 +849,112 @@
     box-shadow: 0 10px 30px rgba(37, 99, 235, .18);
 }
 
-.submission-card h3{
-    color:#fff;
-    margin-bottom:10px;
+.submission-card h3 {
+    color: #fff;
+    margin-bottom: 10px;
 }
 
-.submission-card p{
-    color:#cbd5e1;
-    margin:6px 0;
+.submission-card p {
+    color: #cbd5e1;
+    margin: 6px 0;
 }
 
-.submission-card span{
-    display:inline-block;
-    margin-top:10px;
-    padding:6px 12px;
-    border-radius:999px;
-    background:#2563eb;
-    color:white;
-    font-size:13px;
+.submission-card span {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 6px 12px;
+    border-radius: 999px;
+    background: #2563eb;
+    color: white;
+    font-size: 13px;
 }
 
 
 /* KIRI */
-.submission-left{
-    position:relative;
+.submission-left {
+    position: relative;
 }
 
-.submission-left img{
-    width:180px;
-    height:120px;
-    object-fit:cover;
-    border-radius:14px;
-      border:1px solid #29466d;
+.submission-left img {
+    width: 180px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 14px;
+    border: 1px solid #29466d;
 }
 
-.shot-badge{
-    position:absolute;
-    top:10px;
-    right:10px;
+.shot-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
 
-    background:#2563eb;
-    color:#fff;
+    background: #2563eb;
+    color: #fff;
 
-    padding:5px 10px;
-    border-radius:999px;
-    font-size:12px;
+    padding: 5px 10px;
+    border-radius: 999px;
+    font-size: 12px;
 }
 
 /* TENGAH */
-.submission-middle{
-    flex:1;
+.submission-middle {
+    flex: 1;
 }
 
-.member-row{
-    display:flex;
-    align-items:center;
-    gap:10px;
-    margin-bottom:10px;
+.member-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
 }
 
-.member-row h3{
-    margin:0;
-    color:#fff;
+.member-row h3 {
+    margin: 0;
+    color: #fff;
 }
 
-.division-tag{
-    background:#1d4ed8;
-    color:white;
+.division-tag {
+    background: #1d4ed8;
+    color: white;
 
-    padding:6px 12px;
-    border-radius:999px;
-    font-size:12px;
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 12px;
 }
 
-.submission-middle h2{
-    color:#fff;
-    margin-bottom:10px;
+.submission-middle h2 {
+    color: #fff;
+    margin-bottom: 10px;
 }
 
-.submission-middle p{
-    color:#b7c5d8;
-    line-height:1.7;
+.submission-middle p {
+    color: #b7c5d8;
+    line-height: 1.7;
 }
 
-.submission-middle small{
-    color:#7f93ac;
+.submission-middle small {
+    color: #7f93ac;
 }
 
 /* KANAN */
-.submission-right{
-    width:170px;
+.submission-right {
+    width: 170px;
 
-    display:flex;
-    flex-direction:column;
-    gap:12px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
-.submission-right label{
-    color:white;
-    font-weight:600;
+.submission-right label {
+    color: white;
+    font-weight: 600;
 }
 
-.submission-right select{
-    background:#07111f;
-    color:white;
+.submission-right select {
+    background: #07111f;
+    color: white;
 
-    border:1px solid #284569;
-    border-radius:10px;
-    padding:10px;
+    border: 1px solid #284569;
+    border-radius: 10px;
+    padding: 10px;
 }

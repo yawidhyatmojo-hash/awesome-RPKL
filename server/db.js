@@ -13,9 +13,10 @@ db.run(`
             
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             fullname TEXT NOT NULL,   
-            username TEXT NOT NULL,
+            username TEXT UNIQUE NOT NULL,
             password TEXT NOT NULL,
-            division TEXT NOT NULL
+            division TEXT NOT NULL,
+            role TEXT DEFAULT 'member'
             )
             `);
 

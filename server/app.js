@@ -137,7 +137,7 @@ app.post("/submit", upload.single("screenshot"), (req, res) => {
 });
 
 //Ambil Semua Submission
-app.get("/submissions", (req, res) => {
+app.get("/submission", (req, res) => {
 
     const sql = `SELECT
             submissions.*,

@@ -109,6 +109,25 @@
     background:#1d4ed8;
 }
 
+.login-note{
+    margin-top: 22px;
+    padding: 18px;
+    border-radius: 14px;
+
+    background:#0f172a;
+    border:1px solid #233047;
+}
+
+.login-note strong{
+    color:white;
+}
+
+.login-note p{
+    color:#94a3b8;
+    line-height:1.6;
+    font-size:.9rem;
+}
+
 /* =========================================
    FOOTER
 ========================================= */

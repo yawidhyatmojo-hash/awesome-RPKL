@@ -25,13 +25,21 @@ form.addEventListener("submit", async (e) => {
     if (response.ok) {
 
         //membuat storage di browser, punya key and value
-        
+
         localStorage.setItem(
             "user",                        //user (key) untuk mengambil atau menghapus datanya. 
             JSON.stringify(result.user)     //JSON.stringify(result.user) (value) : yang ingin disimpan. Karena localStorage hanya menerima data berupa teks biasa, fungsi JSON.stringify() bertugas mengubah objek JavaScript result.user (yang berisi data seperti nama, email, id) menjadi baris teks berformat JSON agar bisa diterima oleh localStorage.
         );
 
-        window.location.href = "dashboard.html";
+        if (result.user.role === "admin") {
+
+            window.location.href = "admin.html";
+
+        } else {
+
+            window.location.href = "dashboard.html";
+
+        }
 
     } else {
         alert(result.message);

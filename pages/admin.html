@@ -9,7 +9,7 @@
 
     <title>Admin | RPKL</title>
 
-    <link rel="stylesheet" href="../css/global.css">
+
     <link rel="stylesheet" href="../css/admin.css">
 
 </head>
@@ -92,64 +92,66 @@
             <!-- MAIN -->
             <main class="admin-page">
 
-                <section class="welcome-banner">
+                <div class="top-grid">
 
-                    <div class="welcome-text">
+                    <!-- KIRI -->
+                    <section class="welcome-banner">
 
-                        <span>ADMIN DASHBOARD</span>
+                        <div class="welcome-text">
 
-                        <h2>Welcome back, Admin 👋</h2>
+                            <span>ADMIN DASHBOARD</span>
 
-                        <p>
-                            Review member submissions, monitor progress,
-                            and help the RPKL organization grow.
+                            <h2>Welcome back, Admin 👋</h2>
+
+                            <p>
+                                Review member submissions, monitor progress,
+                                and help the RPKL organization grow.
+                            </p>
+
+                        </div>
+
+                        <button class="manage-btn">
+                            Manage Members
+                        </button>
+
+                    </section>
+
+                    <!-- KANAN -->
+                    <section class="create-member-card">
+
+                        <h3>Create Member</h3>
+
+                        <p class="card-subtitle">
+                            Only admins can create new member accounts.
                         </p>
 
-                    </div>
+                        <form id="createMemberForm" class="create-form">
 
-                    <button class="manage-btn">
-                        Manage Members
-                    </button>
+                            <input type="text" id="fullname" placeholder="Full Name" required>
 
-                </section>
+                            <input type="text" id="username" placeholder="Username" required>
 
-                <!-- ADMIN STATISTICS -->
+                            <input type="password" id="password" placeholder="Password" required>
 
-                <section class="admin-stats">
+                            <select id="division" required>
+                                <option value="">Choose Division</option>
+                                <option>Game Development</option>
+                                <option>Web Development</option>
+                                <option>Robotics</option>
+                                <option>Multimedia</option>
+                            </select>
 
-                    <div class="stat-card">
-                        <div class="stat-icon">👥</div>
-                        <span>Total Members</span>
-                        <h3>12</h3>
-                        <p>+2 this week</p>
-                    </div>
+                            <button type="submit" class="create-btn">
+                                Create Account
+                            </button>
 
-                    <div class="stat-card">
-                        <div class="stat-icon">📋</div>
-                        <span>Pending Review</span>
-                        <h3>3</h3>
-                        <p>Needs attention</p>
-                    </div>
+                        </form>
 
-                    <div class="stat-card">
-                        <div class="stat-icon">✅</div>
-                        <span>Accepted</span>
-                        <h3>18</h3>
-                        <p>+4 this week</p>
-                    </div>
+                    </section>
 
-                    <div class="stat-card">
-                        <div class="stat-icon">🧩</div>
-                        <span>Divisions</span>
-                        <h3>4</h3>
-                        <p>All active</p>
-                    </div>
-
-                </section>
+                </div>
 
                 <div class="content-grid">
-
-
                     <!-- PENDING SUBMISSIONS -->
 
                     <section class="pending-section">
@@ -163,13 +165,28 @@
                         </div>
 
                         <!-- Card akan dibuat JS di sini -->
-                        <div id="submissionList"></div>
+                        <div id="submissionList">
+                            <div class="empty-state">
+
+                                <div class="empty-icon">📝</div>
+
+                                <h3>No pending submissions</h3>
+
+                                <p>
+                                    New submissions will appear here once members upload projects.
+                                </p>
+
+                            </div>
+                        </div>
 
 
                     </section>
 
                     <!---------Kanan-------->
                     <aside class="side-panel">
+
+
+
                         <!-- DIVISION OVERVIEW -->
 
                         <section class="division-card">
@@ -267,6 +284,7 @@
                         </section>
                     </aside>
                 </div>
+
             </main>
 
 
@@ -276,7 +294,7 @@
 
 
 
-<script src="../js/admin.js"></script>
+    <script src="../js/admin.js"></script>
 
 </body>
 
