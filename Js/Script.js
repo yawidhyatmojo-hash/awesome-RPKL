@@ -1,3 +1,20 @@
+/* ==========================
+   MOBILE NAVBAR
+========================== */
+
+const menuToggle = document.getElementById("menuToggle");
+const navbar = document.getElementById("navbar");
+
+if(menuToggle){
+
+    menuToggle.addEventListener("click",()=>{
+
+        navbar.classList.toggle("show");
+
+    });
+
+}
+
 const reveals = document.querySelectorAll(".reveal");
 
 //Ini API browser untuk mendeteksi apakah sebuah elemen masuk ke layar.
@@ -26,49 +43,64 @@ reveals.forEach((section) => {
 const slides = document.querySelectorAll(".slide");
 const dots = document.querySelectorAll(".dot");
 
-let current = 0;
-let autoSlide;
+if (slides.length > 0 && dots.length > 0) {
 
-// Menampilkan slide tertentu
-function showSlide(index) {
+    let current = 0;
+    let autoSlide;
 
-    slides.forEach(slide => {
-        slide.classList.remove("active");
-    });
+    function showSlide(index) {
 
-    dots.forEach(dot => {
-        dot.classList.remove("active");
-    });
+        slides.forEach(slide => {
+            slide.classList.remove("active");
+        });
 
-    slides[index].classList.add("active");
-    dots[index].classList.add("active");
+        dots.forEach(dot => {
+            dot.classList.remove("active");
+        });
 
-    current = index;
-}
+        slides[index].classList.add("active");
+        dots[index].classList.add("active");
 
-// Slide berikutnya
-function nextSlide() {
-
-    let next = current + 1;
-
-    if (next >= slides.length) {
-        next = 0;
+        current = index;
     }
 
-    showSlide(next);
+    function nextSlide() {
+
+        let next = current + 1;
+
+        if (next >= slides.length) {
+            next = 0;
+        }
+
+        showSlide(next);
+    }
+
+    function startSlider() {
+        autoSlide = setInterval(nextSlide, 4000);
+    }
+
+    showSlide(0);
+    startSlider();
+
+    dots.forEach((dot, index) => {
+
+        dot.style.cursor = "pointer";
+
+        dot.addEventListener("click", () => {
+
+            clearInterval(autoSlide);
+
+            showSlide(index);
+
+            startSlider();
+
+        });
+
+    });
+
 }
 
 
-// Auto jalan setiap 4 detik
-function startSlider() {
-
-    autoSlide = setInterval(() => {
-        nextSlide();
-    }, 4000);
-
-}
-
-startSlider();
 
 let submissions = [
     {

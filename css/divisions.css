@@ -1,6 +1,18 @@
 /* =========================================
    DIVISIONS PAGE
 ========================================= */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-x: hidden;
+    /* Mencegah scroll ke samping */
+}
 
 /* ===== HERO ===== */
 .division-hero {
@@ -43,11 +55,20 @@
 }
 
 .hero-image {
-    height: 340px;
-    border-radius: 22px;
-    background-image: url("../assets/images/RPKL11.png");
-    background-size: cover;
-    background-position: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 380px;
+
+    height: auto;
+    object-fit: contain;
+
+    display: block;
 }
 
 .hero-dots {
@@ -208,39 +229,39 @@
 
 /* ===== CARD LAYOUT ===== */
 
-.card-content{
-    display:grid;
-    grid-template-columns:1.6fr 1fr;
-    gap:20px;
-    align-items:center;
+.card-content {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    gap: 20px;
+    align-items: center;
 }
 
-.card-image{
-    width:100%;
-    height:190px;
+.card-image {
+    width: 100%;
+    height: 190px;
 
-    border-radius:16px;
+    border-radius: 16px;
 
-    background-size:cover;
-    background-position:center;
+    background-size: cover;
+    background-position: center;
 
-    transition:.35s;
+    transition: .35s;
 }
 
-.game-img{
-    background-image:url("../assets/images/gamedev.png");
+.game-img {
+    background-image: url("../assets/images/gamedev.png");
 }
 
-.web-img{
-    background-image:url("../assets/images/web.png");
+.web-img {
+    background-image: url("../assets/images/web.png");
 }
 
-.robot-img{
-    background-image:url("../assets/images/robotic.png");
+.robot-img {
+    background-image: url("../assets/images/robotic.png");
 }
 
-.media-img{
-    background-image:url("../assets/images/multi.png");
+.media-img {
+    background-image: url("../assets/images/multi.png");
 }
 
 /* =========================================
@@ -254,26 +275,105 @@
 
 
 
-/* =========================================
+/* ==========================
    MOBILE
-========================================= */
+========================== */
 
-@media (max-width: 700px) {
+@media (max-width:767px) {
 
-    .divisions-container {
+    .divisions-page {
+        padding: 0 16px 50px;
+    }
+
+    .division-hero {
+        
         grid-template-columns: 1fr;
-        width: 92%;
+        /* Ubah menjadi 1 kolom */
+        gap: 28px;
+        padding: 30px 20px;
+        /* Kurangi padding agar tidak sesak */
+        margin: 20px auto 40px;
     }
 
-    .multimedia-card {
-        grid-column: auto;
+    .division-hero h1 {
+        font-size: 2.3rem;
     }
 
-    .subdivisions {
+    .division-grid {
         grid-template-columns: 1fr;
     }
 
-    .page-intro h2 {
-        font-size: 32px;
+    .division-card {
+        padding: 20px;
+    }
+
+    .hero-card {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .hero-content {
+        order: 1;
+        text-align: center;
+    }
+
+    .hero-content p {
+    margin: 0 auto;
+  }
+
+    .hero-image {
+        order: 2;
+    }
+
+    .hero-image img {
+        max-width: 220px;
+        margin: auto;
+    }
+
+    .card-image {
+        height: 180px;
+    }
+
+    .tech-list {
+        flex-wrap: wrap;
+    }
+
+    .card-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+}
+
+/* ==========================
+   TABLET
+========================== */
+
+@media (max-width:1023px) {
+
+    .division-hero {
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 2.8rem;
+    }
+
+    .division-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+    }
+
+    .card-content {
+        grid-template-columns: 1fr;
+    }
+
+    .card-image {
+        height: 180px;
+    }
+
+    .hero-image img {
+        max-width: 280px;
     }
 }

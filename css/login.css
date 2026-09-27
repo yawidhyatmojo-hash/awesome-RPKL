@@ -149,3 +149,59 @@
 .auth-footer a:hover{
     text-decoration:underline;
 }
+
+/* ==========================
+   TABLET
+========================== */
+
+@media (max-width:1023px){
+
+.login-container{
+    grid-template-columns:1fr;
+    max-width:620px;
+}
+
+.login-left{
+    min-height:240px;
+    text-align:center;
+}
+
+}
+
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media (max-width:767px){
+
+.login-page{
+    padding:24px 20px;
+}
+
+.login-container{
+    border-radius:22px;
+}
+
+.login-left{
+    padding:32px 24px;
+    min-height:200px;
+}
+
+.login-left h2{
+    font-size:2rem;
+}
+
+.login-right{
+    padding:30px 22px;
+}
+
+.login-form input{
+    height:46px;
+}
+
+.login-btn{
+    height:48px;
+}
+
+}

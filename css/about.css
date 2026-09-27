@@ -1,32 +1,31 @@
-
-
 /* =========================
    ABOUT PAGE
 ========================= */
 
-.about-page{
+.about-page {
     width: 90%;
     max-width: 1100px;
     margin: 0 auto;
 }
-.about-hero{
+
+.about-hero {
     text-align: center;
     padding: 80px 0 70px;
 }
 
-.about-hero span{
+.about-hero span {
     color: #60a5fa;
     font-size: 14px;
     letter-spacing: 2px;
     font-weight: 600;
 }
 
-.about-hero h2{
+.about-hero h2 {
     font-size: 56px;
     margin: 16px 0;
 }
 
-.about-hero p{
+.about-hero p {
     max-width: 650px;
     margin: auto;
     color: #94a3b8;
@@ -34,40 +33,43 @@
 }
 
 .mission {
-    display: flex;
-    align-items: center;
-    gap: 60px;
-
-    padding: 40px 0 80px;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr; /* Kolom kiri (gambar) & kanan (teks) */
+  gap: 50px;
+  align-items: center;
+  max-width: 1200px;
+  margin: 80px auto;
 }
 
-.mission-image,.mission-content{
+.mission-image,
+.mission-content {
     flex: 1;
 }
 
-.mission-image img {
-    width: 60%;
-    height: 320px;
-    object-fit: cover;
-    border-radius: 20px;
-
-    display: block;
+/* Ukuran Logo/Gambar di Desktop */
+.mission-image img,
+.mission img {
+  width: 100%;
+  max-width: 320px; /* Batas maksimal ukuran gambar */
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
 
-.mission-content span{
+.mission-content span {
     color: #60a5fa;
     font-size: 13px;
     letter-spacing: 2px;
     font-weight: 600;
 }
 
-.mission-content h2{
+.mission-content h2 {
     font-size: 42px;
     margin: 12px 0 18px;
     line-height: 1.2;
 }
 
-.mission-content p{
+.mission-content p {
     color: #94a3b8;
     line-height: 1.8;
 }
@@ -75,25 +77,120 @@
 /* ---------- TEAM ---------- */
 .team {
     text-align: center;
-    padding:80px 0;
-    border-top:1px solid rgba(255,255,255,.08);
+    padding: 80px 0;
+    border-top: 1px solid rgba(255, 255, 255, .08);
 }
 
 .team span {
-     color:#60a5fa;
-     font-size: 13px;
-     letter-spacing: 3.5 px;
-     font-weight:600px ;
+    color: #60a5fa;
+    font-size: 13px;
+    letter-spacing: 3.5 px;
+    font-weight: 600px;
 }
 
-.team h2{
-    font-size:42px;
-    margin:16px 0;
+.team h2 {
+    font-size: 42px;
+    margin: 16px 0;
 }
 
-.team p{
-    max-width:650px;
-    margin:auto;
-    color:#94a3b8;
-    line-height:1.8;
+.team p {
+    max-width: 650px;
+    margin: auto;
+    color: #94a3b8;
+    line-height: 1.8;
+}
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media (max-width:767px) {
+
+    .about-page {
+        padding: 0 20px;
+    }
+
+    .about-hero {
+        padding: 48px 0;
+    }
+
+    .about-hero h2 {
+        font-size: 2.3rem;
+        line-height: 1.15;
+    }
+
+    .about-hero p {
+        max-width: 100%;
+    }
+
+    .mission {
+        grid-template-columns: 1fr;
+        /* Stacked: Gambar di atas, teks di bawah */
+        text-align: center;
+        /* Merapikan teks ke tengah */
+        gap: 24px;
+        padding: 0 20px;
+    }
+
+    /* Ukuran gambar yang ideal untuk layar HP */
+    .mission-image img,
+    .mission img {
+        max-width: 180px;
+        /* Tidak terlalu besar dan fit di layar HP */
+        margin: 0 auto;
+    }
+
+    .mission-content h2 {
+        font-size: 2rem;
+    }
+
+    .mission p {
+        margin: 0 auto;
+        max-width: 100%;
+    }
+
+    .team {
+        padding: 60px 0;
+    }
+
+    .team h2 {
+        font-size: 2rem;
+    }
+
+}
+
+/* ==========================
+   TABLET
+========================== */
+
+@media (max-width:1023px) {
+
+    .about-hero {
+        text-align: center;
+        padding: 70px 0;
+    }
+
+    .about-hero h2 {
+        font-size: 3rem;
+    }
+
+    .mission {
+        gap: 30px;
+    }
+
+    .mission-image img,
+    .mission img {
+        max-width: 240px;
+
+    }
+
+    .mission-content {
+        align-items: center;
+    }
+
+    .team {
+        text-align: center;
+        padding: 70px 0;
+    }
+
 }
