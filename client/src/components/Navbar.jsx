@@ -5,7 +5,7 @@ function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <header className="border-b border-white/10 bg-linear-to-r from-slate-950 via-blue-950 to-slate-950">
+        <header className="relative border-b border-white/10 bg-linear-to-r from-slate-950 via-blue-950 to-slate-950">
 
             <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
 
@@ -24,8 +24,10 @@ function Navbar() {
                     ☰
                 </button>
 
-                <nav className={`${isOpen ? "block" : "hidden"} md:block`}>
-                    <ul className="flex items-center gap-8">
+                <nav className={`${isOpen ? "block" : "hidden"}  absolute left-0 top-full w-full
+    bg-slate-950
+    md:static md:block md:w-auto md:bg-transparent`}>
+                    <ul className="flex flex-col gap-4 px-6 py-5 md:flex-row md:items-center md:gap-8 md:px-0 md:py-0">
 
                         <li>
                             <Link
