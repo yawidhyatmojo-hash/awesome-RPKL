@@ -1,4 +1,12 @@
 import Slider from "../components/Slider";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+import {
+  faRocket,
+  faCode,
+  faUsers,
+  faTrophy,
+} from "@fortawesome/free-solid-svg-icons";
 
 function Home() {
   return (
@@ -89,52 +97,72 @@ function Home() {
           </div>
 
           {/* Why Join */}
-          <div className="mt-14">
+          <div className="mt-16">
             <h3 className="text-2xl font-bold text-white md:text-3xl">
               🚀 Mengapa Harus Join IT Club?
             </h3>
 
-            <div className="mt-8 space-y-6">
+            <div className="mt-8 grid gap-5 md:grid-cols-2">
 
-              <div>
-                <h4 className="font-semibold text-white">
+              {/* Skill Masa Depan */}
+              <div className="rounded-2xl border border-white/10 bg-slate-950/60 p-6 transition duration-300 hover:-translate-y-1 hover:border-sky-500/40">
+                <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-sky-500/10 text-sky-400">
+                  <FontAwesomeIcon icon={faRocket} />
+                </div>
+
+                <h4 className="text-lg font-semibold text-white">
                   Skill Masa Depan
                 </h4>
 
-                <p className="mt-1 leading-7 text-slate-400">
+                <p className="mt-3 leading-7 text-slate-400">
                   Pelajari keahlian yang sangat dibutuhkan di era digital,
                   mulai dari coding hingga desain grafis.
                 </p>
               </div>
 
-              <div>
-                <h4 className="font-semibold text-white">
+              {/* Proyek Nyata */}
+              <div className="rounded-2xl border border-white/10 bg-slate-950/60 p-6 transition duration-300 hover:-translate-y-1 hover:border-sky-500/40">
+                <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-sky-500/10 text-sky-400">
+                  <FontAwesomeIcon icon={faCode} />
+                </div>
+
+                <h4 className="text-lg font-semibold text-white">
                   Proyek Nyata
                 </h4>
 
-                <p className="mt-1 leading-7 text-slate-400">
+                <p className="mt-3 leading-7 text-slate-400">
                   Jangan cuma belajar teori! Kamu akan diajak membuat
                   website, aplikasi, atau game buatanmu sendiri.
                 </p>
               </div>
 
-              <div>
-                <h4 className="font-semibold text-white">
+              {/* Komunitas Seru */}
+              <div className="rounded-2xl border border-white/10 bg-slate-950/60 p-6 transition duration-300 hover:-translate-y-1 hover:border-sky-500/40">
+                <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-sky-500/10 text-sky-400">
+                  <FontAwesomeIcon icon={faUsers} />
+                </div>
+
+                <h4 className="text-lg font-semibold text-white">
                   Komunitas Seru
                 </h4>
 
-                <p className="mt-1 leading-7 text-slate-400">
+                <p className="mt-3 leading-7 text-slate-400">
                   Temukan teman-teman sefrekunsi yang punya passion
                   sama di bidang teknologi.
                 </p>
               </div>
 
-              <div>
-                <h4 className="font-semibold text-white">
+              {/* Lomba & Prestasi */}
+              <div className="rounded-2xl border border-white/10 bg-slate-950/60 p-6 transition duration-300 hover:-translate-y-1 hover:border-sky-500/40">
+                <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-sky-500/10 text-sky-400">
+                  <FontAwesomeIcon icon={faTrophy} />
+                </div>
+
+                <h4 className="text-lg font-semibold text-white">
                   Lomba & Prestasi
                 </h4>
 
-                <p className="mt-1 leading-7 text-slate-400">
+                <p className="mt-3 leading-7 text-slate-400">
                   Kesempatan untuk mewakili sekolah dalam berbagai
                   kompetisi IT tingkat daerah maupun nasional.
                 </p>
